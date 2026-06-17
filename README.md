@@ -4,10 +4,6 @@
 
 <br/>
 
-<img src="https://komarev.com/ghvc/?username=kabirvashisht4-glitch&label=👁️+Profile+Views&color=00d9ff&style=flat-square" />
-&nbsp;
-<img src="https://img.shields.io/github/followers/kabirvashisht4-glitch?label=Followers&style=flat-square&color=00d9ff&labelColor=0d1117&logo=github" />
-
 </div>
 
 ---
@@ -94,17 +90,6 @@ class Kabir:
 [![GitHub Streak](https://streak-stats.demolab.com?user=kabirvashisht4-glitch&theme=tokyonight&hide_border=true&background=0d1117&stroke=00d9ff&ring=00d9ff&fire=ff6b6b&currStreakLabel=00d9ff&sideLabels=00d9ff&dates=888888)](https://git.io/streak-stats)
 
 </div>
-
----
-
-## 🏆 GitHub Trophies
-
-<div align="center">
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=kabirvashisht4-glitch&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&row=1&column=6)](https://github.com/ryo-ma/github-profile-trophy)
-
-</div>
-
 ---
 
 ## 📈 Contribution Graph
@@ -114,6 +99,7 @@ class Kabir:
 [![Kabir's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=kabirvashisht4-glitch&bg_color=0d1117&color=00d9ff&line=00d9ff&point=ffffff&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 </div>
+
 ---
 
 ## 🤝 Let's Connect
