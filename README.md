@@ -79,10 +79,7 @@ class Kabir:
 ## 📊 The Numbers Don't Lie
 
 <div align="center">
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=kabirvashisht4-glitch&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=00d9ff&icon_color=00d9ff&text_color=ffffff" />
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kabirvashisht4-glitch&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d9ff&text_color=ffffff" />
-
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=kabirvashisht4-glitch&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d9ff&icon_color=00d9ff&text_color=ffffff&hide=contribs" />
 </div>
 
 <div align="center">
