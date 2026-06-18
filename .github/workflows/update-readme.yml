@@ -12,23 +12,46 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: Update widget cache params
+      - name: Update README with cache bust
         run: |
           TIMESTAMP=$(date +%s)
           
-          # Add cache-bust to github-readme-stats
-          sed -i "s/github-readme-stats.vercel.app\/api?username=kabirvashisht4-glitch\([^[:space:]]*\)/github-readme-stats.vercel.app\/api?username=kabirvashisht4-glitch\1\&v=$TIMESTAMP/g" README.md
+          # Simple: just replace the entire param sections
+          python3 << EOF
+          import re
           
-          # Add cache-bust to streak-stats
-          sed -i "s/streak-stats.demolab.com?user=kabirvashisht4-glitch/streak-stats.demolab.com?user=kabirvashisht4-glitch\&v=$TIMESTAMP/g" README.md
+          with open('README.md', 'r') as f:
+              content = f.read()
           
-          # Add cache-bust to activity-graph
-          sed -i "s/github-readme-activity-graph.vercel.app\/graph?username=kabirvashisht4-glitch/github-readme-activity-graph.vercel.app\/graph?username=kabirvashisht4-glitch\&v=$TIMESTAMP/g" README.md
+          # Add cache bust to stats
+          content = re.sub(
+              r'(github-readme-stats\.vercel\.app/api\?username=kabirvashisht4-glitch[^)"\s]*)',
+              r'\1&v=$TIMESTAMP',
+              content
+          )
+          
+          # Add cache bust to streak
+          content = re.sub(
+              r'(streak-stats\.demolab\.com\?user=kabirvashisht4-glitch[^)"\s]*)',
+              r'\1&v=$TIMESTAMP',
+              content
+          )
+          
+          # Add cache bust to activity graph
+          content = re.sub(
+              r'(github-readme-activity-graph\.vercel\.app/graph\?username=kabirvashisht4-glitch[^)"\s]*)',
+              r'\1&v=$TIMESTAMP',
+              content
+          )
+          
+          with open('README.md', 'w') as f:
+              f.write(content)
+          EOF
       
       - name: Commit and push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          git commit -m "🔄 Refresh widgets" || exit 0
+          git diff-index --quiet HEAD || git commit -m "🔄 Refresh widgets"
           git push
