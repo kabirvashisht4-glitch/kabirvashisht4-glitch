@@ -12,7 +12,7 @@
 
 ```python
 class Kabir:
-    name        = "Kabir Vashisht"
+    name       = "Kabir Vashisht"
     role        = "Second-year CS + Engineering Student"
 
     stack       = ["Python", "JavaScript", "TypeScript", "React"]
