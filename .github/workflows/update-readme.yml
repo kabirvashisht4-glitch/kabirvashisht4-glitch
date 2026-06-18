@@ -1,0 +1,36 @@
+name: Update README
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+  workflow_dispatch:     # Also lets you trigger manually
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Update README with timestamp
+        run: |
+          # Get current timestamp
+          TIMESTAMP=$(date +%s)
+          
+          # Replace cache-bust param in README
+          sed -i "s/&t=[0-9]*/\&t=$TIMESTAMP/g" README.md
+          
+          # If no &t param exists, add one to each widget URL
+          sed -i 's/vercel\.app\/api?/vercel.app\/api?t='$TIMESTAMP'\&/g' README.md
+      
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "🔄 Auto-update widgets - $(date)" || echo "No changes to commit"
+      
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
