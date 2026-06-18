@@ -1,9 +1,9 @@
-name: Update README
+name: Update README Widgets
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight UTC
-  workflow_dispatch:     # Also lets you trigger manually
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:
 
 jobs:
   update:
@@ -12,25 +12,23 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: Update README with timestamp
+      - name: Update widget cache params
         run: |
-          # Get current timestamp
           TIMESTAMP=$(date +%s)
           
-          # Replace cache-bust param in README
-          sed -i "s/&t=[0-9]*/\&t=$TIMESTAMP/g" README.md
+          # Add cache-bust to github-readme-stats
+          sed -i "s/github-readme-stats.vercel.app\/api?username=kabirvashisht4-glitch\([^[:space:]]*\)/github-readme-stats.vercel.app\/api?username=kabirvashisht4-glitch\1\&v=$TIMESTAMP/g" README.md
           
-          # If no &t param exists, add one to each widget URL
-          sed -i 's/vercel\.app\/api?/vercel.app\/api?t='$TIMESTAMP'\&/g' README.md
+          # Add cache-bust to streak-stats
+          sed -i "s/streak-stats.demolab.com?user=kabirvashisht4-glitch/streak-stats.demolab.com?user=kabirvashisht4-glitch\&v=$TIMESTAMP/g" README.md
+          
+          # Add cache-bust to activity-graph
+          sed -i "s/github-readme-activity-graph.vercel.app\/graph?username=kabirvashisht4-glitch/github-readme-activity-graph.vercel.app\/graph?username=kabirvashisht4-glitch\&v=$TIMESTAMP/g" README.md
       
-      - name: Commit changes
+      - name: Commit and push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          git commit -m "🔄 Auto-update widgets - $(date)" || echo "No changes to commit"
-      
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git commit -m "🔄 Refresh widgets" || exit 0
+          git push
