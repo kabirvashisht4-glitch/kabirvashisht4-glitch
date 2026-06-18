@@ -1,0 +1,29 @@
+name: Refresh Widgets
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Increment version
+        run: |
+          # Get current v number and increment it
+          CURRENT=$(grep -o 'v=[0-9]*' README.md | head -1 | cut -d= -f2)
+          NEW=$((CURRENT + 1))
+          
+          # Replace all v numbers with new one
+          sed -i "s/v=[0-9]*/v=$NEW/g" README.md
+      
+      - name: Commit and push
+        run: |
+          git config user.email "bot@github.com"
+          git config user.name "Bot"
+          git add README.md
+          git commit -m "🔄 Refresh widgets" || exit 0
+          git push
