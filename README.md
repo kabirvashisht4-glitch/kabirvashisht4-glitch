@@ -29,17 +29,6 @@ class Kabir:
 
 ---
 
-## 🐍 Snake Eating My Contributions
-
-<div align="center">
-
-![Snake animation](https://raw.githubusercontent.com/kabirvashisht4-glitch/kabirvashisht4-glitch/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)
-![Snake animation](https://raw.githubusercontent.com/kabirvashisht4-glitch/kabirvashisht4-glitch/output/github-contribution-grid-snake.svg#gh-light-mode-only)
-
-</div>
-
----
-
 ## ⚡ Skills — But Make It Interesting
 
 <div align="center">
