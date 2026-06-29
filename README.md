@@ -3,11 +3,7 @@
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=Hey%2C+I'm+Kabir+Vashisht+%F0%9F%91%8B;Builder+%7C+Thinker+%7C+Open+Source+Enjoyer;Python+%2B+JS+%2B+CAD+%3D+%F0%9F%94%A5;Always+learning%2C+always+shipping." alt="Typing SVG" />
 
 <br/>
-
 </div>
-
----
-
 ## 🧬 `whoami`
 
 ```python
