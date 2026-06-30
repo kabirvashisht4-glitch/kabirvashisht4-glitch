@@ -58,30 +58,6 @@ class Kabir:
 ![3D Design](https://img.shields.io/badge/3D%20Modeling-Parametric%20Design-blueviolet?style=for-the-badge)
 
 </div>
-
----
-
-## 📊 The Numbers Don't Lie
-
-<div align="center">
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=kabirvashisht4-glitch&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d9ff&icon_color=00d9ff&text_color=ffffff&hide=contribs&v=49" />
-</div>
-
-<div align="center">
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=kabirvashisht4-glitch&theme=tokyonight&hide_border=true&background=0d1117&stroke=00d9ff&ring=00d9ff&fire=ff6b6b&currStreakLabel=00d9ff&sideLabels=00d9ff&dates=888888&v=49)](https://git.io/streak-stats)
-
-</div>
----
-
-## 📈 Contribution Graph
-
-<div align="center">
-
-[![Kabir's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=kabirvashisht4-glitch&bg_color=0d1117&color=00d9ff&line=00d9ff&point=ffffff&area=true&hide_border=true&v=49)](https://github.com/ashutosh00710/github-readme-activity-graph)
-
-</div>
-
 ---
 
 ## 🤝 Let's Connect
