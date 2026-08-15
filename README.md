@@ -1,5 +1,1 @@
-Hi ,People my name is Kabir.V just a normal person thanks for looking buy. I am a explorer just exploring different feilds and making different projects. 
-
-- I am currently learning C++
-- I have also learning some concepts of AI currently reading 'Hands on Machine learning'.
-  
+Hi ,People my name is Kabir.V just a normal person thanks for staying buy. I am a explorer just exploring different feilds and making different projects. 
