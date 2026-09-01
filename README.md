@@ -2,7 +2,9 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&height=240&color=gradient&customColorList=6,11,20&text=KABIR%20VASHISHT&fontSize=54&fontColor=FFFFFF&fontAlignY=33&desc=%E3%82%AB%E3%83%93%E3%83%BC%E3%83%AB%20%E3%83%BB%20PACIFIER&descAlignY=52&descSize=16&animation=fadeIn" width="100%" alt="Kabir Vashisht"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=23&pause=1200&color=A855F7&center=true&vCenter=true&random=false&width=820&height=75&lines=%E7%AC%AC%E4%B8%80%E8%A9%B1+%E2%80%94+CHAPTER+ONE%3A+THE+EXPLORER;18+y%2Fo+CS+%2B+AI+student.+Currently+shipping.;I+read+other+people's+code+until+I+find+the+crack.;Studying+ML+%E2%80%94+and+debugging+it+in+the+wild.;20+merged+PRs.+41+bugs+filed.+No+arc+skipped.;%22If+it's+broken%2C+I+want+to+see+it.%22" alt="Typing SVG"/>
+<!--TYPING:START-->
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=23&pause=1200&color=A855F7&center=true&vCenter=true&random=false&width=820&height=75&lines=%E7%AC%AC%E4%B8%80%E8%A9%B1%20%E2%80%94%20CHAPTER%20ONE%3A%20THE%20EXPLORER;18%20y%2Fo%20CS%20%2B%20AI%20student.%20Currently%20shipping.;I%20read%20other%20people's%20code%20until%20I%20find%20the%20crack.;Studying%20ML%20%E2%80%94%20and%20debugging%20it%20in%20the%20wild.;20%20merged%20PRs.%2041%20bugs%20filed.%20No%20arc%20skipped.;%22If%20it's%20broken%2C%20I%20want%20to%20see%20it.%22" alt="Typing SVG"/>
+<!--TYPING:END-->
 
 <p>
 <a href="https://www.linkedin.com/in/kabir-vashisht-dev/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0D1117" alt="LinkedIn"/></a>
@@ -12,10 +14,8 @@
 </p>
 
 <p>
-<img src="https://komarev.com/ghpvc/?username=kabirvashisht4-glitch&label=Readers&color=a855f7&style=for-the-badge" alt="Profile views"/>
-<img src="https://img.shields.io/github/followers/kabirvashisht4-glitch?label=Followers&style=for-the-badge&color=a855f7&labelColor=0D1117&logo=github" alt="Followers"/>
-<img src="https://img.shields.io/badge/Merged-20-22D3EE?style=for-the-badge&labelColor=0D1117&logo=git&logoColor=white" alt="Merged PRs"/>
-<img src="https://img.shields.io/badge/Bugs%20Filed-41-F97316?style=for-the-badge&labelColor=0D1117&logo=github&logoColor=white" alt="Issues filed"/>
+<a href="https://github.com/kabirvashisht4-glitch?tab=followers"><img src="https://img.shields.io/github/followers/kabirvashisht4-glitch?label=Followers&style=for-the-badge&color=a855f7&labelColor=0D1117&logo=github" alt="Followers"/></a>
+<a href="https://github.com/kabirvashisht4-glitch?tab=repositories"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fkabirvashisht4-glitch&query=%24.public_repos&label=Public%20Repos&style=for-the-badge&color=22D3EE&labelColor=0D1117&logo=github" alt="Public repos"/></a>
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,11,20&height=3" width="100%" alt=""/>
