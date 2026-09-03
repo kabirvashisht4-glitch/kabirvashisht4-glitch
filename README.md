@@ -2,9 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&height=240&color=gradient&customColorList=6,11,20&text=KABIR%20VASHISHT&fontSize=54&fontColor=FFFFFF&fontAlignY=33&desc=%E3%82%AB%E3%83%93%E3%83%BC%E3%83%AB%20%E3%83%BB%20PACIFIER&descAlignY=52&descSize=16&animation=fadeIn" width="100%" alt="Kabir Vashisht"/>
 
-<!--TYPING:START-->
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=23&pause=1200&color=A855F7&center=true&vCenter=true&random=false&width=820&height=75&lines=%E7%AC%AC%E4%B8%80%E8%A9%B1%20%E2%80%94%20CHAPTER%20ONE%3A%20THE%20EXPLORER;18%20y%2Fo%20CS%20%2B%20AI%20student.%20Currently%20shipping.;I%20read%20other%20people's%20code%20until%20I%20find%20the%20crack.;Studying%20ML%20%E2%80%94%20and%20debugging%20it%20in%20the%20wild.;20%20merged%20PRs.%2041%20bugs%20filed.%20No%20arc%20skipped.;%22If%20it's%20broken%2C%20I%20want%20to%20see%20it.%22" alt="Typing SVG"/>
-<!--TYPING:END-->
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=23&pause=1200&color=A855F7&center=true&vCenter=true&random=false&width=820&height=75&lines=%E7%AC%AC%E4%B8%80%E8%A9%B1%20%E2%80%94%20CHAPTER%20ONE%3A%20THE%20EXPLORER;18%20y%2Fo%20CS%20%2B%20AI%20student.%20Currently%20shipping.;I%20read%20other%20people's%20code%20until%20I%20find%20the%20crack.;Studying%20ML%20%E2%80%94%20and%20debugging%20it%20in%20the%20wild.;%22If%20it's%20broken%2C%20I%20want%20to%20see%20it.%22" alt="Typing SVG"/>
 
 <p>
 <a href="https://www.linkedin.com/in/kabir-vashisht-dev/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0D1117" alt="LinkedIn"/></a>
@@ -58,19 +56,14 @@
 
 <div align="center">
 
-<!--STATS:START-->
-<table>
-<tr>
-<td align="center" width="20%"><h2>564</h2><sub>contributions<br/>this year</sub></td>
-<td align="center" width="20%"><h2>132</h2><sub>repositories<br/>contributed to</sub></td>
-<td align="center" width="20%"><h2>50</h2><sub>pull requests<br/>opened</sub></td>
-<td align="center" width="20%"><h2>20</h2><sub>merged<br/>13 upstream</sub></td>
-<td align="center" width="20%"><h2>41</h2><sub>bugs<br/>filed</sub></td>
-</tr>
-</table>
-<!--STATS:END-->
+<p>
+<img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Apr&label=pull%20requests&color=A855F7&style=for-the-badge&labelColor=0D1117" alt="pull requests"/>
+<img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Apr+is%3Amerged&label=merged&color=2EA043&style=for-the-badge&labelColor=0D1117" alt="merged"/>
+<img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Aissue&label=bugs%20filed&color=F97316&style=for-the-badge&labelColor=0D1117" alt="bugs filed"/>
+<img src="https://img.shields.io/github/followers/kabirvashisht4-glitch?label=followers&style=for-the-badge&color=22D3EE&labelColor=0D1117&logo=github" alt="followers"/>
+</p>
 
-<sub>↑ these refresh automatically every day at 06:00 IST</sub>
+<sub>↑ live — these query GitHub every time the page loads</sub>
 
 </div>
 
@@ -199,76 +192,72 @@ Security / SIEM
 
 <blockquote>Not "I contributed to open source." Here is exactly what, exactly where, and who merged it.</blockquote>
 
-<!--BATTLELOG:START-->
 <table>
 <tr>
 <th align="left" width="22%">Opponent</th>
-<th align="left" width="58%">The fight</th>
-<th align="left" width="20%">Result</th>
+<th align="left" width="56%">The fight</th>
+<th align="left" width="22%">Result <sub>(live)</sub></th>
 </tr>
 
 <tr>
 <td valign="top"><a href="https://github.com/sktime/skpro"><b>sktime/skpro</b></a></td>
 <td valign="top">Found <b>silent data corruption</b> in <code>BaseProbaRegressor._predict_quantiles</code> — a MultiIndex misalignment quietly returning wrong numbers. Also a type-validation loop that never returned <code>False</code>. Filed both, then shipped the fixes.</td>
-<td valign="top">🟢 <b>6 merged</b></td>
+<td valign="top"><img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Apr+is%3Amerged+repo%3Asktime%2Fskpro&label=merged&color=2EA043&style=flat-square&labelColor=0D1117" alt="merged"/><br/><img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Aissue+repo%3Asktime%2Fskpro&label=filed&color=1F6FEB&style=flat-square&labelColor=0D1117" alt="filed"/></td>
 </tr>
 
 <tr>
 <td valign="top"><a href="https://github.com/Tracer-Cloud/opensre"><b>Tracer-Cloud/opensre</b></a></td>
 <td valign="top">Real feature work on an AI-SRE toolkit — mapped Alertmanager alerts and silences into report evidence, retyped <code>ReasoningClientProvider</code> to its actual contract, and fixed Telegram turn dispatch so approvals could resolve.</td>
-<td valign="top">🟢 <b>3 merged</b></td>
+<td valign="top"><img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Apr+is%3Amerged+repo%3ATracer-Cloud%2Fopensre&label=merged&color=2EA043&style=flat-square&labelColor=0D1117" alt="merged"/></td>
 </tr>
 
 <tr>
 <td valign="top"><a href="https://github.com/sagemath/sage"><b>SageMath</b></a></td>
 <td valign="top">Reported a <b>segfault</b> in <code>RegularMatroid._fast_isom_test</code>, plus a PARI conversion that silently drops the row count on zero-column matrices. Merged docstring and docs work across the org.</td>
-<td valign="top">🟢 <b>3 merged</b><br/><sub>sage · sagecell · website</sub></td>
+<td valign="top"><img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Apr+is%3Amerged+org%3Asagemath&label=merged&color=2EA043&style=flat-square&labelColor=0D1117" alt="merged"/><br/><img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Aissue+org%3Asagemath&label=filed&color=1F6FEB&style=flat-square&labelColor=0D1117" alt="filed"/><br/><sub>sage · sagecell · website</sub></td>
 </tr>
 
 <tr>
 <td valign="top"><a href="https://github.com/open-telemetry/opentelemetry.io"><b>OpenTelemetry</b></a></td>
 <td valign="top">Traced 404-ing <code>@open-telemetry/docs-*</code> team links back to members-only orgs, then patched the README to say so.</td>
-<td valign="top">🟢 <b>merged</b></td>
+<td valign="top"><img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Apr+is%3Amerged+org%3Aopen-telemetry&label=merged&color=2EA043&style=flat-square&labelColor=0D1117" alt="merged"/></td>
 </tr>
 
 <tr>
 <td valign="top"><a href="https://github.com/NVIDIA-NeMo/Automodel"><b>NVIDIA NeMo</b></a></td>
 <td valign="top"><code>group_by_length</code> silently no-ops on lazily-tokenized datasets. Their agent docs also ship a CLI and PR-title format that fail CI.</td>
-<td valign="top">🔵 open</td>
+<td valign="top"><img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Aissue+org%3ANVIDIA-NeMo&label=filed&color=1F6FEB&style=flat-square&labelColor=0D1117" alt="filed"/></td>
 </tr>
 
 <tr>
 <td valign="top"><a href="https://github.com/anthropics/claude-code"><b>Anthropic claude-code</b></a></td>
 <td valign="top">All four state-file error handlers in the <code>ralph-wiggum</code> stop hook are unreachable. Separately: the issue sweep pages by position through a list it reorders as it goes.</td>
-<td valign="top">🔵 filed</td>
+<td valign="top"><img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Aissue+repo%3Aanthropics%2Fclaude-code&label=filed&color=1F6FEB&style=flat-square&labelColor=0D1117" alt="filed"/></td>
 </tr>
 
 <tr>
 <td valign="top"><a href="https://github.com/json-schema-org/JSON-Schema-Test-Suite"><b>JSON Schema</b></a></td>
 <td valign="top">Spotted spec test cases that landed in one draft and were never backported — <code>idn-hostname</code> and RFC 5321 mailbox coverage.</td>
-<td valign="top">🔵 open</td>
+<td valign="top"><img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Aissue+org%3Ajson-schema-org&label=filed&color=1F6FEB&style=flat-square&labelColor=0D1117" alt="filed"/></td>
 </tr>
 
 <tr>
 <td valign="top"><a href="https://github.com/SakanaAI/ALE-Bench"><b>Sakana AI · ALE-Bench</b></a></td>
 <td valign="top">Private evaluation aborts when a failed evaluation is followed by an identical solution.</td>
-<td valign="top">🔵 open</td>
+<td valign="top"><img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Aissue+org%3ASakanaAI&label=filed&color=1F6FEB&style=flat-square&labelColor=0D1117" alt="filed"/></td>
 </tr>
 
 <tr>
 <td valign="top"><b>google/meridian</b><br/><b>django-admin-tools</b><br/><b>c2siorg</b> · <b>ruxailab</b></td>
-<td valign="top">Dead links, services that won't start on a clean install, and an <b>unauthenticated POST endpoint</b> that let anyone overwrite any public profile.</td>
-<td valign="top">🟢🔵 mixed</td>
+<td valign="top">Dead links, services that will not start on a clean install, and an <b>unauthenticated POST endpoint</b> that let anyone overwrite any public profile.</td>
+<td valign="top"><img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Aissue+org%3Ac2siorg+org%3Aruxailab&label=filed&color=1F6FEB&style=flat-square&labelColor=0D1117" alt="filed"/></td>
 </tr>
 
 </table>
-<!--BATTLELOG:END-->
 
 <div align="center">
 
-<!--TOTALS:START-->
-<b>50 opened</b> · <b>20 merged</b> · <b>13 merged upstream</b> · <b>41 bugs filed</b>
-<!--TOTALS:END-->
+<img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Apr+is%3Amerged+-user%3Akabirvashisht4-glitch&label=merged%20upstream&color=2EA043&style=flat-square&labelColor=0D1117" alt="merged"/> <img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Apr&label=opened&color=A855F7&style=flat-square&labelColor=0D1117" alt="opened"/>
 
 <p>
 <a href="https://github.com/sktime"><img src="https://img.shields.io/badge/sktime-0D1117?style=flat-square&logo=github&logoColor=A855F7" alt="sktime"/></a>
