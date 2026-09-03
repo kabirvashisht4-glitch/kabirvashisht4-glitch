@@ -1,0 +1,41 @@
+name: TEST - does Actions work
+
+on:
+  workflow_dispatch:
+  push:
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show what the repo actually has
+        run: |
+          echo "=== default branch check ==="
+          git branch --show-current
+          echo ""
+          echo "=== does README.md exist? ==="
+          ls -la README.md || echo "NO README.md"
+          echo ""
+          echo "=== does it have the markers? ==="
+          grep -c "STATS:START" README.md || echo "NO STATS MARKERS FOUND"
+          grep -c "TYPING:START" README.md || echo "NO TYPING MARKERS FOUND"
+          echo ""
+          echo "=== workflow files present ==="
+          ls -la .github/workflows/
+
+      - name: Can this workflow actually push?
+        run: |
+          date -u > .actions-test.txt
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .actions-test.txt
+          git commit -m "test: proving Actions can write"
+          git push
+          echo ""
+          echo "SUCCESS - Actions can write to this repo."
+          echo "Delete .actions-test.txt and this workflow when you are done."
