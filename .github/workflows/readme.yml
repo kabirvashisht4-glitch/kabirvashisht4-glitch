@@ -87,7 +87,7 @@ jobs:
           (async () => {
             const d = await gql(
               "query($login:String!){user(login:$login){contributionsCollection{" +
-                "contributionCalendar{totalContributions}" +
+                "totalContributions " +
                 "totalRepositoriesWithContributedCommits " +
                 "totalRepositoriesWithContributedPullRequests " +
                 "totalRepositoriesWithContributedIssues}}}",
@@ -95,7 +95,7 @@ jobs:
             );
 
             const c = d.user.contributionsCollection;
-            const contributions = c.contributionCalendar.totalContributions;
+            const contributions = c.totalContributions;
             const repos = Math.max(
               c.totalRepositoriesWithContributedCommits,
               c.totalRepositoriesWithContributedPullRequests,
@@ -109,7 +109,7 @@ jobs:
 
             const stats =
               '<table>\n<tr>\n' +
-              '<td align="center" width="20%"><h2>' + contributions + '</h2><sub>contributions<br/>this year</sub></td>\n' +
+              '<td align="center" width="20%"><h2>' + contributions + '</h2><sub>contributions<br/>all time</sub></td>\n' +
               '<td align="center" width="20%"><h2>' + repos + '</h2><sub>repositories<br/>contributed to</sub></td>\n' +
               '<td align="center" width="20%"><h2>' + prs + '</h2><sub>pull requests<br/>opened</sub></td>\n' +
               '<td align="center" width="20%"><h2>' + merged + '</h2><sub>merged<br/>' + upstream + ' upstream</sub></td>\n' +
