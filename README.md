@@ -3,7 +3,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&height=240&color=gradient&customColorList=6,11,20&text=KABIR%20VASHISHT&fontSize=54&fontColor=FFFFFF&fontAlignY=33&desc=%E3%82%AB%E3%83%93%E3%83%BC%E3%83%AB%20%E3%83%BB%20PACIFIER&descAlignY=52&descSize=16&animation=fadeIn" width="100%" alt="Kabir Vashisht"/>
 
 <!--TYPING:START-->
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=23&pause=1200&color=A855F7&center=true&vCenter=true&random=false&width=820&height=75&lines=%E7%AC%AC%E4%B8%80%E8%A9%B1%20%E2%80%94%20CHAPTER%20ONE%3A%20THE%20EXPLORER;18%20y%2Fo%20CS%20%2B%20AI%20student.%20Currently%20shipping.;I%20read%20other%20people's%20code%20until%20I%20find%20the%20crack.;Studying%20ML%20%E2%80%94%20and%20debugging%20it%20in%20the%20wild.;28%20merged%20PRs.%2057%20bugs%20filed.%20No%20arc%20skipped.;%22If%20it's%20broken%2C%20I%20want%20to%20see%20it.%22" alt="Typing SVG"/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=23&pause=1200&color=A855F7&center=true&vCenter=true&random=false&width=820&height=75&lines=%E7%AC%AC%E4%B8%80%E8%A9%B1%20%E2%80%94%20CHAPTER%20ONE%3A%20THE%20EXPLORER;18%20y%2Fo%20CS%20%2B%20AI%20student.%20Currently%20shipping.;I%20read%20other%20people's%20code%20until%20I%20find%20the%20crack.;Studying%20ML%20%E2%80%94%20and%20debugging%20it%20in%20the%20wild.;28%20merged%20PRs.%2058%20bugs%20filed.%20No%20arc%20skipped.;%22If%20it's%20broken%2C%20I%20want%20to%20see%20it.%22" alt="Typing SVG"/>
 <!--TYPING:END-->
 
 <p>
@@ -68,11 +68,11 @@
 <!--STATS:START-->
 <table>
 <tr>
-<td align="center" width="20%"><h2>634</h2><sub>contributions<br/>this year</sub></td>
-<td align="center" width="20%"><h2>24</h2><sub>repositories<br/>contributed to</sub></td>
-<td align="center" width="20%"><h2>66</h2><sub>pull requests<br/>opened</sub></td>
+<td align="center" width="20%"><h2>637</h2><sub>contributions<br/>this year</sub></td>
+<td align="center" width="20%"><h2>25</h2><sub>repositories<br/>contributed to</sub></td>
+<td align="center" width="20%"><h2>67</h2><sub>pull requests<br/>opened</sub></td>
 <td align="center" width="20%"><h2>28</h2><sub>merged<br/>22 upstream</sub></td>
-<td align="center" width="20%"><h2>57</h2><sub>bugs<br/>filed</sub></td>
+<td align="center" width="20%"><h2>58</h2><sub>bugs<br/>filed</sub></td>
 </tr>
 </table>
 <!--STATS:END-->
