@@ -162,6 +162,7 @@ Security / SIEM
 
 <blockquote>Still early in this one. Learning it three ways at once, because reading about a gradient and watching one explode are different experiences.</blockquote>
 
+
 <table>
 <tr>
 <th align="left" width="26%">Front</th>
