@@ -101,15 +101,9 @@
 <br/><br/>
 
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=kabirvashisht4-glitch&theme=github_dark" alt="Languages by repo" height="200"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=kabirvashisht4-glitch&theme=github_dark" alt="Languages by commit" height="200"/>
-
 <br/><br/>
-
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=kabirvashisht4-glitch&theme=github_dark&utcOffset=5.5" alt="When I commit" height="220"/>
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,11,20&height=3" width="100%" alt=""/>
-
 </div>
+
 
 <h2>武器 · ARSENAL</h2>
 
