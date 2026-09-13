@@ -2,9 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&height=240&color=gradient&customColorList=6,11,20&text=KABIR%20VASHISHT&fontSize=54&fontColor=FFFFFF&fontAlignY=33&desc=%E3%82%AB%E3%83%93%E3%83%BC%E3%83%AB%20%E3%83%BB%20PACIFIER&descAlignY=52&descSize=16&animation=fadeIn" width="100%" alt="Kabir Vashisht"/>
 
-<!--TYPING:START-->
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=23&pause=1200&color=A855F7&center=true&vCenter=true&random=false&width=820&height=75&lines=%E7%AC%AC%E4%B8%80%E8%A9%B1%20%E2%80%94%20CHAPTER%20ONE%3A%20THE%20EXPLORER;18%20y%2Fo%20CS%20%2B%20AI%20student.%20Currently%20shipping.;I%20read%20other%20people's%20code%20until%20I%20find%20the%20crack.;Studying%20ML%20%E2%80%94%20and%20debugging%20it%20in%20the%20wild.;30%20merged%20PRs.%2061%20bugs%20filed.%20No%20arc%20skipped.;%22If%20it's%20broken%2C%20I%20want%20to%20see%20it.%22" alt="Typing SVG"/>
-<!--TYPING:END-->
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=23&pause=1200&color=A855F7&center=true&vCenter=true&random=false&width=820&height=75&lines=%E7%AC%AC%E4%B8%80%E8%A9%B1%20%E2%80%94%20CHAPTER%20ONE%3A%20THE%20EXPLORER;18%20y%2Fo%20CS%20%2B%20AI%20student.%20Currently%20shipping.;I%20read%20other%20people's%20code%20until%20I%20find%20the%20crack.;Studying%20ML%20%E2%80%94%20and%20debugging%20it%20in%20the%20wild.;%22If%20it's%20broken%2C%20I%20want%20to%20see%20it.%22" alt="Typing SVG"/>
 
 <p>
 <a href="https://www.linkedin.com/in/kabir-vashisht-dev/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0D1117" alt="LinkedIn"/></a>
@@ -65,18 +63,6 @@
 <img src="https://img.shields.io/github/followers/kabirvashisht4-glitch?label=followers&style=for-the-badge&color=22D3EE&labelColor=0D1117&logo=github" alt="followers"/>
 </p>
 
-<!--STATS:START-->
-<table>
-<tr>
-<td align="center" width="20%"><h2>645</h2><sub>contributions<br/>this year</sub></td>
-<td align="center" width="20%"><h2>25</h2><sub>repositories<br/>contributed to</sub></td>
-<td align="center" width="20%"><h2>69</h2><sub>pull requests<br/>opened</sub></td>
-<td align="center" width="20%"><h2>30</h2><sub>merged<br/>24 upstream</sub></td>
-<td align="center" width="20%"><h2>61</h2><sub>bugs<br/>filed</sub></td>
-</tr>
-</table>
-<!--STATS:END-->
-
 <sub>↑ live — these query GitHub every time the page loads</sub>
 
 </div>
@@ -101,9 +87,15 @@
 <br/><br/>
 
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=kabirvashisht4-glitch&theme=github_dark" alt="Languages by repo" height="200"/>
-<br/><br/>
-</div>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=kabirvashisht4-glitch&theme=github_dark" alt="Languages by commit" height="200"/>
 
+<br/><br/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=kabirvashisht4-glitch&theme=github_dark&utcOffset=5.5" alt="When I commit" height="220"/>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,11,20&height=3" width="100%" alt=""/>
+
+</div>
 
 <h2>武器 · ARSENAL</h2>
 
@@ -156,7 +148,6 @@ Security / SIEM
 
 <blockquote>Still early in this one. Learning it three ways at once, because reading about a gradient and watching one explode are different experiences.</blockquote>
 
-
 <table>
 <tr>
 <th align="left" width="26%">Front</th>
@@ -201,6 +192,7 @@ Security / SIEM
 
 <blockquote>Not "I contributed to open source." Here is exactly what, exactly where, and who merged it.</blockquote>
 
+<!--BATTLELOG:START-->
 <table>
 <tr>
 <th align="left" width="22%">Opponent</th>
@@ -263,6 +255,7 @@ Security / SIEM
 </tr>
 
 </table>
+<!--BATTLELOG:END-->
 
 <div align="center">
 
