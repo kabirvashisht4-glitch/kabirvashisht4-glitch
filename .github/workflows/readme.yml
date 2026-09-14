@@ -1,16 +1,24 @@
-name: Update README stats
+name: Update README
 
-# Refreshes the POWER LEVEL table and the animated header line in README.md.
-# Runs every 6 hours.
+# Regenerates four blocks in README.md every 6 hours:
+#
+#   SUMMARY   the opening paragraph's merged / issue counts
+#   UPSTREAM  the "Upstream work" table - counts and the latest PR per project
+#   OPENPRS   the live list of open pull requests in other people's repos
+#   ISSUES    the most recent issues filed upstream
+#   FOOTER    the "Auto-updated <timestamp>" line
+#
+# Projects are DISCOVERED, not hand-listed. Land a PR somewhere new and a row
+# appears here within 6 hours. The `focus` prose below is the only hand-written
+# part, and repos with no entry get a focus line built from their PR titles.
 #
 # Requires:
-#   - README.md contains the STATS and TYPING marker comments
 #   - Settings > Actions > General > Workflow permissions > Read and write
 
 on:
   schedule:
-    - cron: "30 */6 * * *"     # 00:30, 06:30, 12:30, 18:30 UTC  (06:00, 12:00, 18:00, 00:00 IST)
-  workflow_dispatch:           # the "Run workflow" button in the Actions tab
+    - cron: "30 */6 * * *"     # 00:30, 06:30, 12:30, 18:30 UTC = 06:00, 12:00, 18:00, 00:00 IST
+  workflow_dispatch:
   push:
     branches: [main]
     paths: [".github/workflows/readme.yml"]
@@ -18,7 +26,7 @@ on:
 permissions:
   contents: write
 
-concurrency:                   # never let two runs fight over the same file
+concurrency:
   group: update-readme
   cancel-in-progress: false
 
@@ -30,14 +38,14 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
 
-      - name: Refresh stats in README.md
+      - name: Rebuild README.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
         run: |
-          cat > /tmp/update.js <<'SCRIPT_EOF'
+          cat > /tmp/readme.js <<'SCRIPT_EOF'
           const fs = require("fs");
           const USER = process.env.USERNAME;
           const H = {
@@ -46,111 +54,290 @@ jobs:
             "User-Agent": USER + "-readme",
           };
 
-          async function gql(query, variables) {
-            const r = await fetch("https://api.github.com/graphql", {
-              method: "POST",
-              headers: { ...H, "Content-Type": "application/json" },
-              body: JSON.stringify({ query, variables }),
-            });
-            if (!r.ok) throw new Error("GraphQL " + r.status + ": " + (await r.text()));
-            const j = await r.json();
-            if (j.errors) throw new Error("GraphQL: " + JSON.stringify(j.errors));
-            return j.data;
-          }
+          const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-          // The search API rate-limits hard; back off and retry rather than failing the run.
-          async function count(q) {
-            const url = "https://api.github.com/search/issues?per_page=1&q=" + encodeURIComponent(q);
-            for (let i = 0; i < 4; i++) {
-              const r = await fetch(url, { headers: H });
-              if (r.ok) return (await r.json()).total_count;
-              if ([403, 422, 429].includes(r.status)) {
-                await new Promise((s) => setTimeout(s, 12000 * (i + 1)));
-                continue;
+          // Titles are arbitrary text. flat() makes one line of it; cell() also
+          // escapes "|", which would otherwise split a markdown table column.
+          // Apply cell() to each piece exactly once - escaping twice renders a
+          // literal backslash.
+          const flat = (s) => String(s).replace(/\r?\n/g, " ").trim();
+          const cell = (s) => flat(s).replace(/\|/g, "\\|");
+
+          // ---------------------------------------------------------------
+          // Hand-written focus lines. Everything else about a project - the
+          // counts, the latest PR, whether it appears at all - is discovered.
+          // `match` is tested against the "owner/repo" string.
+          // ---------------------------------------------------------------
+          const FOCUS = [
+            {
+              label: "sktime / skpro",
+              url: "https://github.com/sktime/skpro",
+              match: (r) => r.startsWith("sktime/"),
+              focus: "Probabilistic regression internals — MultiIndex alignment in quantile prediction, and type validation that never rejected anything.",
+            },
+            {
+              label: "SageMath",
+              url: "https://github.com/sagemath/sage",
+              match: (r) => r.startsWith("sagemath/"),
+              focus: "Matroid isomorphism segfaults, PARI matrix conversion on zero-column input, docstrings and docs across the org.",
+            },
+            {
+              label: "Tracer Cloud",
+              url: "https://github.com/Tracer-Cloud/opensre",
+              match: (r) => r.startsWith("Tracer-Cloud/"),
+              focus: "AI-SRE toolkit — Alertmanager alerts and silences as report evidence, provider retyping, Telegram approval dispatch.",
+            },
+            {
+              label: "NVIDIA NeMo",
+              url: "https://github.com/NVIDIA-NeMo",
+              match: (r) => r.startsWith("NVIDIA-NeMo/"),
+              focus: "Dataset tokenization paths where batching options silently no-op, plus agent docs that ship CI-failing instructions.",
+            },
+            {
+              label: "OpenTelemetry",
+              url: "https://github.com/open-telemetry",
+              match: (r) => r.startsWith("open-telemetry/"),
+              focus: "Docs infrastructure and team-link integrity across members-only orgs.",
+            },
+            {
+              label: "Anthropic claude-code",
+              url: "https://github.com/anthropics/claude-code",
+              match: (r) => r.startsWith("anthropics/"),
+              focus: "Unreachable error handlers in hook state files, and an issue sweep that pages by position through a list it reorders.",
+            },
+            {
+              label: "JSON Schema",
+              url: "https://github.com/json-schema-org",
+              match: (r) => r.startsWith("json-schema-org/"),
+              focus: "Spec test-suite coverage that landed in one draft and was never backported.",
+            },
+            {
+              label: "Sakana AI",
+              url: "https://github.com/SakanaAI",
+              match: (r) => r.startsWith("SakanaAI/"),
+              focus: "Private evaluation aborting when a failed run is followed by an identical solution.",
+            },
+          ];
+
+          const MAX_DISCOVERED = 6;   // extra projects beyond the list above
+          const MAX_OPEN_PRS   = 15;
+          const MAX_ISSUES     = 10;
+
+          // ---------------------------------------------------------------
+          // One paginated call per query. Cheap, and well inside the search
+          // API's rate limit.
+          // ---------------------------------------------------------------
+          async function searchAll(q) {
+            const out = [];
+            for (let page = 1; page <= 10; page++) {
+              const url =
+                "https://api.github.com/search/issues?per_page=100&page=" + page +
+                "&sort=created&order=desc&q=" + encodeURIComponent(q);
+
+              let j = null;
+              for (let attempt = 0; attempt < 4; attempt++) {
+                const r = await fetch(url, { headers: H });
+                if (r.ok) { j = await r.json(); break; }
+                if ([403, 422, 429].includes(r.status)) {
+                  await sleep(15000 * (attempt + 1));
+                  continue;
+                }
+                console.error("search " + r.status + " on: " + q);
+                return null;          // null = failed, caller leaves block alone
               }
-              throw new Error("search " + r.status + ": " + (await r.text()));
+              if (!j || !j.items) return null;
+
+              out.push(...j.items);
+              if (j.items.length < 100) break;
+              await sleep(2500);
             }
-            throw new Error("search kept failing: " + q);
+            return out;
           }
 
-          function replaceBlock(src, tag, body) {
-            const start = "<!--" + tag + ":START-->";
-            const end = "<!--" + tag + ":END-->";
-            const s = src.indexOf(start);
-            const e = src.indexOf(end);
-            if (s === -1 || e === -1 || e < s) {
-              throw new Error("Missing " + tag + " markers in README.md");
-            }
-            return src.slice(0, s) + start + "\n" + body + "\n" + end + src.slice(e + end.length);
-          }
+          const repoOf = (it) => it.repository_url.split("/").slice(-2).join("/");
+          const isMine = (full) => full.split("/")[0].toLowerCase() === USER.toLowerCase();
+          const newest = (a, b) => new Date(b.created_at) - new Date(a.created_at);
 
           (async () => {
-            const d = await gql(
-              "query($login:String!){user(login:$login){contributionsCollection{contributionCalendar{totalContributions}totalRepositoriesWithContributedCommits totalRepositoriesWithContributedPullRequests totalRepositoriesWithContributedIssues}}}",
-              { login: USER }
-            );
+            const merged = await searchAll("author:" + USER + " type:pr is:merged");
+            await sleep(2500);
+            const open   = await searchAll("author:" + USER + " type:pr is:open");
+            await sleep(2500);
+            const issues = await searchAll("author:" + USER + " type:issue");
 
-            const c = d.user.contributionsCollection;
-            const contributions = c.contributionCalendar.totalContributions;
-            const repos = Math.max(
-              c.totalRepositoriesWithContributedCommits,
-              c.totalRepositoriesWithContributedPullRequests,
-              c.totalRepositoriesWithContributedIssues
-            );
+            let src = fs.readFileSync("README.md", "utf8");
+            let wrote = [];
 
-            const prs      = await count("author:" + USER + " type:pr");
-            const merged   = await count("author:" + USER + " type:pr is:merged");
-            const upstream = await count("author:" + USER + " type:pr is:merged -user:" + USER);
-            const issues   = await count("author:" + USER + " type:issue");
+            function put(tag, body) {
+              if (body === null) { console.log("skip " + tag + " (no data)"); return; }
+              const S = "<!--" + tag + ":START-->", E = "<!--" + tag + ":END-->";
+              const i = src.indexOf(S), j = src.indexOf(E);
+              if (i === -1 || j === -1 || j < i) {
+                console.error("no " + tag + " markers - skipping that block");
+                return;
+              }
+              src = src.slice(0, i) + S + "\n" + body + "\n" + E + src.slice(j + E.length);
+              wrote.push(tag);
+            }
 
-            const stats =
-              '<table>\n<tr>\n' +
-              '<td align="center" width="20%"><h2>' + contributions + '</h2><sub>contributions<br/>this year</sub></td>\n' +
-              '<td align="center" width="20%"><h2>' + repos + '</h2><sub>repositories<br/>contributed to</sub></td>\n' +
-              '<td align="center" width="20%"><h2>' + prs + '</h2><sub>pull requests<br/>opened</sub></td>\n' +
-              '<td align="center" width="20%"><h2>' + merged + '</h2><sub>merged<br/>' + upstream + ' upstream</sub></td>\n' +
-              '<td align="center" width="20%"><h2>' + issues + '</h2><sub>bugs<br/>filed</sub></td>\n' +
-              '</tr>\n</table>';
+            // ---- Upstream work table -------------------------------------
+            if (merged && open) {
+              const byRepo = new Map();
+              const note = (it, kind) => {
+                const full = repoOf(it);
+                if (isMine(full)) return;
+                if (!byRepo.has(full)) byRepo.set(full, { merged: [], open: [] });
+                byRepo.get(full)[kind].push(it);
+              };
+              merged.forEach((it) => note(it, "merged"));
+              open.forEach((it) => note(it, "open"));
 
-            // ";" separates lines for readme-typing-svg, so it must never appear inside one.
-            const lines = [
-              "第一話 — CHAPTER ONE: THE EXPLORER",
-              "18 y/o CS + AI student. Currently shipping.",
-              "I read other people's code until I find the crack.",
-              "Studying ML — and debugging it in the wild.",
-              merged + " merged PRs. " + issues + " bugs filed. No arc skipped.",
-              '"If it\'s broken, I want to see it."',
-            ].map((s) => encodeURIComponent(s.replace(/;/g, ","))).join(";");
+              // Fold repos into projects: a FOCUS entry, or the repo on its own.
+              const projects = new Map();
+              for (const [full, d] of byRepo) {
+                const hit = FOCUS.find((f) => f.match(full));
+                const key = hit ? hit.label : full;
+                if (!projects.has(key)) {
+                  projects.set(key, {
+                    label: key,
+                    url: hit ? hit.url : "https://github.com/" + full,
+                    focus: hit ? hit.focus : null,
+                    merged: [], open: [],
+                  });
+                }
+                const p = projects.get(key);
+                p.merged.push(...d.merged);
+                p.open.push(...d.open);
+              }
 
-            const typing =
-              '<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=23' +
-              '&pause=1200&color=A855F7&center=true&vCenter=true&random=false&width=820&height=75' +
-              '&lines=' + lines + '" alt="Typing SVG"/>';
+              // Curated projects first, in order; then discovered ones by size.
+              const order = FOCUS.map((f) => f.label);
+              const rows = [...projects.values()].sort((a, b) => {
+                const ai = order.indexOf(a.label), bi = order.indexOf(b.label);
+                if (ai !== -1 && bi !== -1) return ai - bi;
+                if (ai !== -1) return -1;
+                if (bi !== -1) return 1;
+                return (b.merged.length + b.open.length) - (a.merged.length + a.open.length);
+              });
 
-            let readme = fs.readFileSync("README.md", "utf8");
-            readme = replaceBlock(readme, "STATS", stats);
-            readme = replaceBlock(readme, "TYPING", typing);
-            fs.writeFileSync("README.md", readme);
+              const kept = rows.filter(
+                (p, i) => order.includes(p.label) || i < order.length + MAX_DISCOVERED
+              );
 
-            console.log(
-              "contributions=%s repos=%s prs=%s merged=%s upstream=%s issues=%s",
-              contributions, repos, prs, merged, upstream, issues
-            );
-          })().catch((e) => {
-            console.error(e.message);
-            process.exit(1);
+              const lines = [
+                "| Project | PRs | Focus |",
+                "| --- | --- | --- |",
+              ];
+              for (const p of kept) {
+                const counts = [];
+                if (p.merged.length) counts.push(p.merged.length + " merged");
+                if (p.open.length) counts.push(p.open.length + " open");
+                if (!counts.length) continue;
+
+                // Each piece is escaped once, here. The assembled string is not
+                // escaped again below.
+                let focus;
+                if (p.focus) {
+                  focus = cell(p.focus);
+                } else {
+                  const t = [...p.merged, ...p.open].sort(newest).slice(0, 2)
+                    .map((x) => cell(x.title));
+                  focus = t.length ? t.join(" · ") : "Upstream contributions.";
+                }
+
+                const latest = [...p.merged, ...p.open].sort(newest)[0];
+                if (latest) {
+                  const tag = p.merged.includes(latest) ? "Latest" : "Open";
+                  focus += "<br/><sub>" + tag + ": [#" + latest.number + "](" +
+                           latest.html_url + ") — " + cell(latest.title) + "</sub>";
+                }
+
+                lines.push(
+                  "| [" + cell(p.label) + "](" + p.url + ") | " +
+                  counts.join(" · ") + " | " + focus + " |"
+                );
+              }
+              put("UPSTREAM", lines.join("\n"));
+            } else {
+              put("UPSTREAM", null);
+            }
+
+            // ---- Open PRs -------------------------------------------------
+            if (open) {
+              const ext = open.filter((it) => !isMine(repoOf(it))).sort(newest);
+              const body = ext.length
+                ? ext.slice(0, MAX_OPEN_PRS).map((it) =>
+                    "- [" + repoOf(it) + "#" + it.number + "](" + it.html_url + ") — " +
+                    flat(it.title)
+                  ).join("\n")
+                : "_No open pull requests upstream right now._";
+              put("OPENPRS", body);
+            } else {
+              put("OPENPRS", null);
+            }
+
+            // ---- Issues filed ---------------------------------------------
+            if (issues) {
+              const ext = issues.filter((it) => !isMine(repoOf(it))).sort(newest);
+              const body = ext.length
+                ? ext.slice(0, MAX_ISSUES).map((it) =>
+                    "- [" + repoOf(it) + "#" + it.number + "](" + it.html_url + ") — " +
+                    flat(it.title)
+                  ).join("\n")
+                : "_None yet._";
+              put("ISSUES", body);
+            } else {
+              put("ISSUES", null);
+            }
+
+            // ---- Summary paragraph ----------------------------------------
+            if (merged && issues) {
+              const up = merged.filter((it) => !isMine(repoOf(it))).length;
+              const iss = issues.filter((it) => !isMine(repoOf(it))).length;
+              put("SUMMARY",
+                "I read other people's code until I find the crack. Scientific Python, " +
+                "ML training paths, and docs infrastructure — the places where a bug stays " +
+                "quiet because the output still looks correct. **" + up +
+                " merged upstream PRs** across sktime, SageMath, OpenTelemetry, Tracer Cloud " +
+                "and others, plus " + iss + " issues filed against NVIDIA NeMo, Anthropic, " +
+                "JSON Schema and Sakana AI."
+              );
+            } else {
+              put("SUMMARY", null);
+            }
+
+            // ---- Footer ----------------------------------------------------
+            // Only stamp a new time if real data actually refreshed. Otherwise
+            // the footer would claim freshness it does not have, and every run
+            // would commit a timestamp bump and nothing else.
+            if (wrote.length) {
+              const now = new Date().toISOString().replace("T", " ").slice(0, 16);
+              put("FOOTER", "Auto-updated " + now + " UTC");
+            } else {
+              console.log("no data refreshed - leaving the footer alone");
+            }
+
+            if (wrote.length) {
+              fs.writeFileSync("README.md", src);
+              console.log("wrote: " + wrote.join(", "));
+            } else {
+              console.log("nothing written");
+            }
+          })().catch((err) => {
+            console.error("Refresh failed:", err.message);
+            // Exit 0 regardless. A flaky API call must not turn the repo red.
           });
           SCRIPT_EOF
-          node /tmp/update.js
+          node /tmp/readme.js
 
-      - name: Commit if the numbers changed
+      - name: Commit if anything changed
         run: |
           if [[ -n "$(git status --porcelain README.md)" ]]; then
             git config user.name  "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add README.md
-            git commit -m "chore: refresh README stats"
+            git commit -m "chore: refresh README"
             git push
           else
-            echo "Numbers unchanged - nothing to commit."
+            echo "Nothing changed."
           fi
