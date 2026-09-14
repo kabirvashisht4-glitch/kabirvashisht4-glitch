@@ -75,48 +75,56 @@ jobs:
           const FOCUS = [
             {
               label: "sktime / skpro",
+              scope: "repo:sktime/skpro",
               url: "https://github.com/sktime/skpro",
               match: (r) => r.startsWith("sktime/"),
               focus: "Probabilistic regression internals — MultiIndex alignment in quantile prediction, and type validation that never rejected anything.",
             },
             {
               label: "SageMath",
+              scope: "org:sagemath",
               url: "https://github.com/sagemath/sage",
               match: (r) => r.startsWith("sagemath/"),
               focus: "Matroid isomorphism segfaults, PARI matrix conversion on zero-column input, docstrings and docs across the org.",
             },
             {
               label: "Tracer Cloud",
+              scope: "org:Tracer-Cloud",
               url: "https://github.com/Tracer-Cloud/opensre",
               match: (r) => r.startsWith("Tracer-Cloud/"),
               focus: "AI-SRE toolkit — Alertmanager alerts and silences as report evidence, provider retyping, Telegram approval dispatch.",
             },
             {
               label: "NVIDIA NeMo",
+              scope: "org:NVIDIA-NeMo",
               url: "https://github.com/NVIDIA-NeMo",
               match: (r) => r.startsWith("NVIDIA-NeMo/"),
               focus: "Dataset tokenization paths where batching options silently no-op, plus agent docs that ship CI-failing instructions.",
             },
             {
               label: "OpenTelemetry",
+              scope: "org:open-telemetry",
               url: "https://github.com/open-telemetry",
               match: (r) => r.startsWith("open-telemetry/"),
               focus: "Docs infrastructure and team-link integrity across members-only orgs.",
             },
             {
               label: "Anthropic claude-code",
+              scope: "repo:anthropics/claude-code",
               url: "https://github.com/anthropics/claude-code",
               match: (r) => r.startsWith("anthropics/"),
               focus: "Unreachable error handlers in hook state files, and an issue sweep that pages by position through a list it reorders.",
             },
             {
               label: "JSON Schema",
+              scope: "org:json-schema-org",
               url: "https://github.com/json-schema-org",
               match: (r) => r.startsWith("json-schema-org/"),
               focus: "Spec test-suite coverage that landed in one draft and was never backported.",
             },
             {
               label: "Sakana AI",
+              scope: "org:SakanaAI",
               url: "https://github.com/SakanaAI",
               match: (r) => r.startsWith("SakanaAI/"),
               focus: "Private evaluation aborting when a failed run is followed by an identical solution.",
@@ -202,9 +210,15 @@ jobs:
                 const hit = FOCUS.find((f) => f.match(full));
                 const key = hit ? hit.label : full;
                 if (!projects.has(key)) {
+                  // Link to a GitHub PR search scoped to this user, so clicking
+                  // the project name shows the actual pull requests rather than
+                  // the repo landing page.
+                  const scope = hit ? hit.scope : "repo:" + full;
                   projects.set(key, {
                     label: key,
-                    url: hit ? hit.url : "https://github.com/" + full,
+                    url: "https://github.com/search?q=" +
+                         encodeURIComponent("author:" + USER + " type:pr " + scope) +
+                         "&type=pullrequests",
                     focus: hit ? hit.focus : null,
                     merged: [], open: [],
                   });
@@ -252,8 +266,9 @@ jobs:
                 const latest = [...p.merged, ...p.open].sort(newest)[0];
                 if (latest) {
                   const tag = p.merged.includes(latest) ? "Latest" : "Open";
-                  focus += "<br/><sub>" + tag + ": [#" + latest.number + "](" +
-                           latest.html_url + ") — " + cell(latest.title) + "</sub>";
+                  focus += "<br><sub>" + tag + ': <a href="' + latest.html_url +
+                           '">#' + latest.number + "</a> — " + cell(latest.title) +
+                           "</sub>";
                 }
 
                 lines.push(
@@ -300,11 +315,10 @@ jobs:
               const iss = issues.filter((it) => !isMine(repoOf(it))).length;
               put("SUMMARY",
                 "I read other people's code until I find the crack. Scientific Python, " +
-                "ML training paths, and docs infrastructure — the places where a bug stays " +
+                "ML training paths, and spec test suites — the places where a bug stays " +
                 "quiet because the output still looks correct. **" + up +
-                " merged upstream PRs** across sktime, SageMath, OpenTelemetry, Tracer Cloud " +
-                "and others, plus " + iss + " issues filed against NVIDIA NeMo, Anthropic, " +
-                "JSON Schema and Sakana AI."
+                " merged upstream PRs** across sktime, SageMath, JSON Schema, NVIDIA NeMo " +
+                "and others, plus **" + iss + " issues filed** upstream."
               );
             } else {
               put("SUMMARY", null);
@@ -316,7 +330,9 @@ jobs:
             // would commit a timestamp bump and nothing else.
             if (wrote.length) {
               const now = new Date().toISOString().replace("T", " ").slice(0, 16);
-              put("FOOTER", "Auto-updated " + now + " UTC");
+              put("FOOTER",
+                "<sub>Auto-updated " + now + " UTC · " +
+                '<a href=".github/workflows/readme.yml">workflow</a></sub>');
             } else {
               console.log("no data refreshed - leaving the footer alone");
             }
