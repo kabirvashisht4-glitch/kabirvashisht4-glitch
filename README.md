@@ -78,10 +78,7 @@ Live snapshot of open pull requests in upstream repos (auto-refreshed).
 
 ## Stats
 
-<img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Apr+is%3Amerged+-user%3Akabirvashisht4-glitch&label=merged%20upstream&color=2EA043&style=flat-square&labelColor=0D1117" alt="merged upstream"/>
-<img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Apr+is%3Aopen+-user%3Akabirvashisht4-glitch&label=open%20PRs&color=A855F7&style=flat-square&labelColor=0D1117" alt="open PRs"/>
-<img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Aissue+-user%3Akabirvashisht4-glitch&label=issues%20filed&color=F97316&style=flat-square&labelColor=0D1117" alt="issues filed"/>
-<img src="https://img.shields.io/github/followers/kabirvashisht4-glitch?label=followers&style=flat-square&color=22D3EE&labelColor=0D1117&logo=github" alt="followers"/>
+<img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Apr+is%3Amerged+-user%3Akabirvashisht4-glitch&label=merged%20upstream&color=2EA043&style=flat-square&labelColor=0D1117" alt="merged upstream"/> <img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Apr+is%3Aopen+-user%3Akabirvashisht4-glitch&label=open%20PRs&color=A855F7&style=flat-square&labelColor=0D1117" alt="open PRs"/> <img src="https://img.shields.io/github/issues-search?query=author%3Akabirvashisht4-glitch+type%3Aissue+-user%3Akabirvashisht4-glitch&label=issues%20filed&color=F97316&style=flat-square&labelColor=0D1117" alt="issues filed"/> <img src="https://img.shields.io/github/followers/kabirvashisht4-glitch?label=followers&style=flat-square&color=22D3EE&labelColor=0D1117&logo=github" alt="followers"/>
 
 <sub>These query GitHub on every page load, so they are never stale.</sub>
 
