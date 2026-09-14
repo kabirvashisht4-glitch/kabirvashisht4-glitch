@@ -1,6 +1,6 @@
 name: Update README
 
-# Regenerates four blocks in README.md every 6 hours:
+# Regenerates five blocks in README.md every hour:
 #
 #   SUMMARY   the opening paragraph's merged / issue counts
 #   UPSTREAM  the "Upstream work" table - counts and the latest PR per project
@@ -9,7 +9,7 @@ name: Update README
 #   FOOTER    the "Auto-updated <timestamp>" line
 #
 # Projects are DISCOVERED, not hand-listed. Land a PR somewhere new and a row
-# appears here within 6 hours. The `focus` prose below is the only hand-written
+# appears here within the hour. The `focus` prose below is the only hand-written
 # part, and repos with no entry get a focus line built from their PR titles.
 #
 # Requires:
@@ -17,8 +17,12 @@ name: Update README
 
 on:
   schedule:
-    - cron: "30 */6 * * *"     # 00:30, 06:30, 12:30, 18:30 UTC = 06:00, 12:00, 18:00, 00:00 IST
-  workflow_dispatch:
+    # Hourly. A PR you open now shows up within the hour instead of waiting
+    # up to six. The job is three API calls, so this is nowhere near any limit.
+    # Note: GitHub delays scheduled runs when its queue is busy - a run landing
+    # 10-30 minutes late is normal and not a failure.
+    - cron: "30 * * * *"
+  workflow_dispatch:           # the "Run workflow" button - fires immediately
   push:
     branches: [main]
     paths: [".github/workflows/readme.yml"]
