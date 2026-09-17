@@ -10,7 +10,7 @@ CS + AI student · open-source contributor
 </div>
 
 <!--SUMMARY:START-->
-I read other people's code until I find the crack. Scientific Python, ML training paths, and spec test suites — the places where a bug stays quiet because the output still looks correct. **28 merged upstream PRs** across sktime, SageMath, JSON Schema, NVIDIA NeMo and others, plus **65 issues filed** upstream.
+I read other people's code until I find the crack. Scientific Python, ML training paths, and spec test suites — the places where a bug stays quiet because the output still looks correct. **28 merged upstream PRs** across sktime, SageMath, JSON Schema, NVIDIA NeMo and others, plus **66 issues filed** upstream.
 <!--SUMMARY:END-->
 
 Currently studying machine learning — the theory, the libraries, and the LLM tooling on top. Reading production ML code until something looks wrong turns out to be a fast way to learn it.
@@ -23,7 +23,7 @@ Currently studying machine learning — the theory, the libraries, and the LLM t
 | [sktime / skpro](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Asktime%2Fskpro&type=pullrequests) | 6 merged · 5 open | Probabilistic regression internals — MultiIndex alignment in quantile prediction, and type validation that never rejected anything.<br><sub>Latest: <a href="https://github.com/sktime/skpro/pull/1034">#1034</a> — [DOC] Fix broken link in dependencies.rst</sub> |
 | [SageMath](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Asagemath&type=pullrequests) | 4 merged · 2 open | Matroid isomorphism segfaults, PARI matrix conversion on zero-column input, docstrings and docs across the org.<br><sub>Open: <a href="https://github.com/sagemath/sage/pull/42752">#42752</a> — Validate the documented parameter domains of the generalized Tamari constructors</sub> |
 | [Tracer Cloud](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3ATracer-Cloud&type=pullrequests) | 3 merged | AI-SRE toolkit — Alertmanager alerts and silences as report evidence, provider retyping, Telegram approval dispatch.<br><sub>Latest: <a href="https://github.com/Tracer-Cloud/opensre/pull/5762">#5762</a> — feat(alertmanager): map alerts and silences into report evidence</sub> |
-| [NVIDIA NeMo](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3ANVIDIA-NeMo&type=pullrequests) | 6 merged · 7 open | Dataset tokenization paths where batching options silently no-op, plus agent docs that ship CI-failing instructions.<br><sub>Open: <a href="https://github.com/NVIDIA-NeMo/Automodel/pull/3918">#3918</a> — fix(loss): stop masked losses from overwriting the caller's labels</sub> |
+| [NVIDIA NeMo](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3ANVIDIA-NeMo&type=pullrequests) | 6 merged · 8 open | Dataset tokenization paths where batching options silently no-op, plus agent docs that ship CI-failing instructions.<br><sub>Open: <a href="https://github.com/NVIDIA-NeMo/Automodel/pull/3934">#3934</a> — fix(datasets): stop default_collater reshaping the caller's example tensors</sub> |
 | [OpenTelemetry](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Aopen-telemetry&type=pullrequests) | 1 merged | Docs infrastructure and team-link integrity across members-only orgs.<br><sub>Latest: <a href="https://github.com/open-telemetry/opentelemetry.io/pull/10457">#10457</a> — docs: add "(members-only)" to team links in README</sub> |
 | [JSON Schema](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Ajson-schema-org&type=pullrequests) | 7 merged · 2 open | Spec test-suite coverage that landed in one draft and was never backported.<br><sub>Open: <a href="https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1198">#1198</a> — test(idn-email): cover the RFC 5321 domain structure</sub> |
 | [c2siorg/Scan8](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Ac2siorg%2FScan8&type=pullrequests) | 4 open | docs: fix documentation links returning 404 · fix: point the worker HPA at the worker and use millicores for cpu<br><sub>Open: <a href="https://github.com/c2siorg/Scan8/pull/149">#149</a> — docs: fix documentation links returning 404</sub> |
@@ -37,6 +37,7 @@ Currently studying machine learning — the theory, the libraries, and the LLM t
 Live snapshot of open pull requests in upstream repos (auto-refreshed).
 
 <!--OPENPRS:START-->
+- [NVIDIA-NeMo/Automodel#3934](https://github.com/NVIDIA-NeMo/Automodel/pull/3934) — fix(datasets): stop default_collater reshaping the caller's example tensors
 - [NVIDIA-NeMo/Automodel#3918](https://github.com/NVIDIA-NeMo/Automodel/pull/3918) — fix(loss): stop masked losses from overwriting the caller's labels
 - [json-schema-org/JSON-Schema-Test-Suite#1198](https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1198) — test(idn-email): cover the RFC 5321 domain structure
 - [c2siorg/Scan8#149](https://github.com/c2siorg/Scan8/pull/149) — docs: fix documentation links returning 404
@@ -51,12 +52,12 @@ Live snapshot of open pull requests in upstream repos (auto-refreshed).
 - [NVIDIA-NeMo/Automodel#3775](https://github.com/NVIDIA-NeMo/Automodel/pull/3775) — fix(launcher): honor --nproc-per-node over the local device count
 - [NVIDIA-NeMo/Automodel#3768](https://github.com/NVIDIA-NeMo/Automodel/pull/3768) — fix(training): honor max_steps when num_epochs is unset
 - [c2siorg/Codelabz#462](https://github.com/c2siorg/Codelabz/pull/462) — fix: show the newest notifications instead of an arbitrary fifty
-- [c2siorg/Scan8#143](https://github.com/c2siorg/Scan8/pull/143) — fix: use the configured proxy when downloading files
 <!--OPENPRS:END-->
 
 ## Issues filed
 
 <!--ISSUES:START-->
+- [NVIDIA-NeMo/Automodel#3933](https://github.com/NVIDIA-NeMo/Automodel/issues/3933) — default_collater reshapes the caller's example tensors from [S] to [1, S]
 - [NVIDIA-NeMo/Automodel#3917](https://github.com/NVIDIA-NeMo/Automodel/issues/3917) — Masked CE losses overwrite the caller's labels in place, zeroing a reused batch's loss
 - [json-schema-org/JSON-Schema-Test-Suite#1197](https://github.com/json-schema-org/JSON-Schema-Test-Suite/issues/1197) — idn-email: the domain half is never checked — no draft has a single invalid-domain case, unlike email
 - [c2siorg/Scan8#148](https://github.com/c2siorg/Scan8/issues/148) — Docs: broken links returning 404 in README.md (demo videos) and Dashboard/revamp_frontend/README.md (CRA docs)
@@ -66,7 +67,6 @@ Live snapshot of open pull requests in upstream repos (auto-refreshed).
 - [NVIDIA-NeMo/Automodel#3846](https://github.com/NVIDIA-NeMo/Automodel/issues/3846) — Sequence-classification recipe over-scales gradients by dp_size
 - [NVIDIA-NeMo/Automodel#3829](https://github.com/NVIDIA-NeMo/Automodel/issues/3829) — Sequence-classification recipe scales gradients by grad_accumulation_steps
 - [NVIDIA-NeMo/Automodel#3825](https://github.com/NVIDIA-NeMo/Automodel/issues/3825) — Checkpoint size estimation runs on every rank before the is_rank_0 guard
-- [json-schema-org/JSON-Schema-Test-Suite#1180](https://github.com/json-schema-org/JSON-Schema-Test-Suite/issues/1180) — relative-json-pointer: nothing tests that the json-pointer part must start with a slash
 <!--ISSUES:END-->
 
 ## Projects
@@ -104,5 +104,5 @@ Python · JavaScript · TypeScript · Node · Express · MongoDB · React · Nex
 ---
 
 <!--FOOTER:START-->
-<sub>Auto-updated 2026-09-17 13:41 UTC · <a href=".github/workflows/readme.yml">workflow</a></sub>
+<sub>Auto-updated 2026-09-17 18:26 UTC · <a href=".github/workflows/readme.yml">workflow</a></sub>
 <!--FOOTER:END-->
