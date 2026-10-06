@@ -31,6 +31,7 @@ Currently studying machine learning — the theory, the libraries, and the LLM t
 | [c2siorg/Codelabz](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Ac2siorg%2FCodelabz&type=pullrequests) | 4 open | fix: write notification_id when the notification is created · fix: scope the notifications page read to the signed-in user<br><sub>Open: <a href="https://github.com/c2siorg/Codelabz/pull/466">#466</a> — fix: write notification_id when the notification is created</sub> |
 | [PrithvijitBose/Proofly](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3APrithvijitBose%2FProofly&type=pullrequests) | 1 merged | Security: authenticate profile publish against GitHub identity<br><sub>Latest: <a href="https://github.com/PrithvijitBose/Proofly/pull/19">#19</a> — Security: authenticate profile publish against GitHub identity</sub> |
 | [mynextproject-portfolio/github-flow-onboarding-kabirvashisht4-glitch](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Amynextproject-portfolio%2Fgithub-flow-onboarding-kabirvashisht4-glitch&type=pullrequests) | 1 merged | feat: personalize greeting with my name<br><sub>Latest: <a href="https://github.com/mynextproject-portfolio/github-flow-onboarding-kabirvashisht4-glitch/pull/2">#2</a> — feat: personalize greeting with my name</sub> |
+| [agentregistry-dev/agentregistry](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Aagentregistry-dev%2Fagentregistry&type=pullrequests) | 1 open | docker: run the server image as a non-root user<br><sub>Open: <a href="https://github.com/agentregistry-dev/agentregistry/pull/703">#703</a> — docker: run the server image as a non-root user</sub> |
 | [Cloud-CV/EvalAI](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3ACloud-CV%2FEvalAI&type=pullrequests) | 1 open | fix #4870: add hover effect to .text-light-gray class<br><sub>Open: <a href="https://github.com/Cloud-CV/EvalAI/pull/4900">#4900</a> — fix #4870: add hover effect to .text-light-gray class</sub> |
 <!--UPSTREAM:END-->
 
@@ -39,6 +40,7 @@ Currently studying machine learning — the theory, the libraries, and the LLM t
 Live snapshot of open pull requests in upstream repos (auto-refreshed).
 
 <!--OPENPRS:START-->
+- [agentregistry-dev/agentregistry#703](https://github.com/agentregistry-dev/agentregistry/pull/703) — docker: run the server image as a non-root user
 - [json-schema-org/JSON-Schema-Test-Suite#1210](https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1210) — test(regex): reject plain syntax errors
 - [SakanaAI/robust-kbench#6](https://github.com/SakanaAI/robust-kbench/pull/6) — Fix mnist_pool: honor kernel_size in forward/backward tasks
 - [NVIDIA-NeMo/Automodel#3918](https://github.com/NVIDIA-NeMo/Automodel/pull/3918) — fix(loss): stop masked losses from overwriting the caller's labels
@@ -53,7 +55,6 @@ Live snapshot of open pull requests in upstream repos (auto-refreshed).
 - [NVIDIA-NeMo/Automodel#3775](https://github.com/NVIDIA-NeMo/Automodel/pull/3775) — fix(launcher): honor --nproc-per-node over the local device count
 - [NVIDIA-NeMo/Automodel#3768](https://github.com/NVIDIA-NeMo/Automodel/pull/3768) — fix(training): honor max_steps when num_epochs is unset
 - [c2siorg/Codelabz#462](https://github.com/c2siorg/Codelabz/pull/462) — fix: show the newest notifications instead of an arbitrary fifty
-- [c2siorg/Scan8#143](https://github.com/c2siorg/Scan8/pull/143) — fix: use the configured proxy when downloading files
 <!--OPENPRS:END-->
 
 ## Issues filed
@@ -106,5 +107,5 @@ Python · JavaScript · TypeScript · Node · Express · MongoDB · React · Nex
 ---
 
 <!--FOOTER:START-->
-<sub>Auto-updated 2026-10-06 03:12 UTC · <a href=".github/workflows/readme.yml">workflow</a></sub>
+<sub>Auto-updated 2026-10-06 10:38 UTC · <a href=".github/workflows/readme.yml">workflow</a></sub>
 <!--FOOTER:END-->
