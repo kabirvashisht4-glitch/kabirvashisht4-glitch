@@ -10,7 +10,7 @@ CS + AI student · open-source contributor
 </div>
 
 <!--SUMMARY:START-->
-I read other people's code until I find the crack. Scientific Python, ML training paths, and spec test suites — the places where a bug stays quiet because the output still looks correct. **34 merged upstream PRs** across sktime, SageMath, JSON Schema, NVIDIA NeMo and others, plus **70 issues filed** upstream.
+I read other people's code until I find the crack. Scientific Python, ML training paths, and spec test suites — the places where a bug stays quiet because the output still looks correct. **34 merged upstream PRs** across sktime, SageMath, JSON Schema, NVIDIA NeMo and others, plus **71 issues filed** upstream.
 <!--SUMMARY:END-->
 
 Currently studying machine learning — the theory, the libraries, and the LLM tooling on top. Reading production ML code until something looks wrong turns out to be a fast way to learn it.
@@ -60,6 +60,7 @@ Live snapshot of open pull requests in upstream repos (auto-refreshed).
 ## Issues filed
 
 <!--ISSUES:START-->
+- [sagemath/sage#42935](https://github.com/sagemath/sage/issues/42935) — Meson subprojects tracking upstream HEAD (mpfi, singular, flint) break builds without any change in Sage
 - [NVIDIA-NeMo/Automodel#4170](https://github.com/NVIDIA-NeMo/Automodel/issues/4170) — ci: a PR that is green against a stale base can turn main red and fail other contributors' PRs
 - [json-schema-org/JSON-Schema-Test-Suite#1209](https://github.com/json-schema-org/JSON-Schema-Test-Suite/issues/1209) — regex: only one syntax error is ever rejected, so a bracket counter passes the whole file
 - [NVIDIA-NeMo/Automodel#4130](https://github.com/NVIDIA-NeMo/Automodel/issues/4130) — Default uv.lock pins torchao 0.14.0, so peft raises ImportError on LoRA injection
@@ -69,7 +70,6 @@ Live snapshot of open pull requests in upstream repos (auto-refreshed).
 - [json-schema-org/JSON-Schema-Test-Suite#1197](https://github.com/json-schema-org/JSON-Schema-Test-Suite/issues/1197) — idn-email: the domain half is never checked — no draft has a single invalid-domain case, unlike email
 - [c2siorg/Scan8#148](https://github.com/c2siorg/Scan8/issues/148) — Docs: broken links returning 404 in README.md (demo videos) and Dashboard/revamp_frontend/README.md (CRA docs)
 - [NVIDIA-NeMo/Automodel#3882](https://github.com/NVIDIA-NeMo/Automodel/issues/3882) — LR scheduler resume applies the old weight-decay schedule and treats num_steps as a delta
-- [NVIDIA-NeMo/Automodel#3869](https://github.com/NVIDIA-NeMo/Automodel/issues/3869) — InfoNCE d2q/symmetric with use_in_batch_negatives=false trains on a loss of exactly 0
 <!--ISSUES:END-->
 
 ## Projects
@@ -107,5 +107,5 @@ Python · JavaScript · TypeScript · Node · Express · MongoDB · React · Nex
 ---
 
 <!--FOOTER:START-->
-<sub>Auto-updated 2026-10-07 16:47 UTC · <a href=".github/workflows/readme.yml">workflow</a></sub>
+<sub>Auto-updated 2026-10-07 22:10 UTC · <a href=".github/workflows/readme.yml">workflow</a></sub>
 <!--FOOTER:END-->
