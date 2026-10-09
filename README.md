@@ -10,7 +10,7 @@ CS + AI student · open-source contributor
 </div>
 
 <!--SUMMARY:START-->
-I read other people's code until I find the crack. Scientific Python, ML training paths, and spec test suites — the places where a bug stays quiet because the output still looks correct. **34 merged upstream PRs** across sktime, SageMath, JSON Schema, NVIDIA NeMo and others, plus **71 issues filed** upstream.
+I read other people's code until I find the crack. Scientific Python, ML training paths, and spec test suites — the places where a bug stays quiet because the output still looks correct. **35 merged upstream PRs** across sktime, SageMath, JSON Schema, NVIDIA NeMo and others, plus **72 issues filed** upstream.
 <!--SUMMARY:END-->
 
 Currently studying machine learning — the theory, the libraries, and the LLM tooling on top. Reading production ML code until something looks wrong turns out to be a fast way to learn it.
@@ -25,7 +25,7 @@ Currently studying machine learning — the theory, the libraries, and the LLM t
 | [Tracer Cloud](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3ATracer-Cloud&type=pullrequests) | 3 merged | AI-SRE toolkit — Alertmanager alerts and silences as report evidence, provider retyping, Telegram approval dispatch.<br><sub>Latest: <a href="https://github.com/Tracer-Cloud/opensre/pull/5762">#5762</a> — feat(alertmanager): map alerts and silences into report evidence</sub> |
 | [NVIDIA NeMo](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3ANVIDIA-NeMo&type=pullrequests) | 9 merged · 8 open | Dataset tokenization paths where batching options silently no-op, plus agent docs that ship CI-failing instructions.<br><sub>Open: <a href="https://github.com/NVIDIA-NeMo/Automodel/pull/4171">#4171</a> — ci: lint the PR merged into its target branch</sub> |
 | [OpenTelemetry](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Aopen-telemetry&type=pullrequests) | 1 merged | Docs infrastructure and team-link integrity across members-only orgs.<br><sub>Latest: <a href="https://github.com/open-telemetry/opentelemetry.io/pull/10457">#10457</a> — docs: add "(members-only)" to team links in README</sub> |
-| [JSON Schema](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Ajson-schema-org&type=pullrequests) | 8 merged · 1 open | Spec test-suite coverage that landed in one draft and was never backported.<br><sub>Open: <a href="https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1210">#1210</a> — test(regex): reject plain syntax errors</sub> |
+| [JSON Schema](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Ajson-schema-org&type=pullrequests) | 9 merged · 1 open | Spec test-suite coverage that landed in one draft and was never backported.<br><sub>Open: <a href="https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1214">#1214</a> — test(regex): accept common valid patterns</sub> |
 | [Sakana AI](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3ASakanaAI&type=pullrequests) | 1 open | Private evaluation aborting when a failed run is followed by an identical solution.<br><sub>Open: <a href="https://github.com/SakanaAI/robust-kbench/pull/6">#6</a> — Fix mnist_pool: honor kernel_size in forward/backward tasks</sub> |
 | [c2siorg/Scan8](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Ac2siorg%2FScan8&type=pullrequests) | 4 open | docs: fix documentation links returning 404 · fix: point the worker HPA at the worker and use millicores for cpu<br><sub>Open: <a href="https://github.com/c2siorg/Scan8/pull/149">#149</a> — docs: fix documentation links returning 404</sub> |
 | [c2siorg/Codelabz](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Ac2siorg%2FCodelabz&type=pullrequests) | 4 open | fix: write notification_id when the notification is created · fix: scope the notifications page read to the signed-in user<br><sub>Open: <a href="https://github.com/c2siorg/Codelabz/pull/466">#466</a> — fix: write notification_id when the notification is created</sub> |
@@ -40,9 +40,9 @@ Currently studying machine learning — the theory, the libraries, and the LLM t
 Live snapshot of open pull requests in upstream repos (auto-refreshed).
 
 <!--OPENPRS:START-->
+- [json-schema-org/JSON-Schema-Test-Suite#1214](https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1214) — test(regex): accept common valid patterns
 - [NVIDIA-NeMo/Automodel#4171](https://github.com/NVIDIA-NeMo/Automodel/pull/4171) — ci: lint the PR merged into its target branch
 - [agentregistry-dev/agentregistry#703](https://github.com/agentregistry-dev/agentregistry/pull/703) — docker: run the server image as a non-root user
-- [json-schema-org/JSON-Schema-Test-Suite#1210](https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1210) — test(regex): reject plain syntax errors
 - [SakanaAI/robust-kbench#6](https://github.com/SakanaAI/robust-kbench/pull/6) — Fix mnist_pool: honor kernel_size in forward/backward tasks
 - [NVIDIA-NeMo/Automodel#3918](https://github.com/NVIDIA-NeMo/Automodel/pull/3918) — fix(loss): stop masked losses from overwriting the caller's labels
 - [c2siorg/Scan8#149](https://github.com/c2siorg/Scan8/pull/149) — docs: fix documentation links returning 404
@@ -60,6 +60,7 @@ Live snapshot of open pull requests in upstream repos (auto-refreshed).
 ## Issues filed
 
 <!--ISSUES:START-->
+- [json-schema-org/JSON-Schema-Test-Suite#1213](https://github.com/json-schema-org/JSON-Schema-Test-Suite/issues/1213) — regex: only one valid pattern is tested, so a checker that rejects alternation or quantifiers passes
 - [sagemath/sage#42935](https://github.com/sagemath/sage/issues/42935) — Meson subprojects tracking upstream HEAD (mpfi, singular, flint) break builds without any change in Sage
 - [NVIDIA-NeMo/Automodel#4170](https://github.com/NVIDIA-NeMo/Automodel/issues/4170) — ci: a PR that is green against a stale base can turn main red and fail other contributors' PRs
 - [json-schema-org/JSON-Schema-Test-Suite#1209](https://github.com/json-schema-org/JSON-Schema-Test-Suite/issues/1209) — regex: only one syntax error is ever rejected, so a bracket counter passes the whole file
@@ -69,7 +70,6 @@ Live snapshot of open pull requests in upstream repos (auto-refreshed).
 - [NVIDIA-NeMo/Automodel#3917](https://github.com/NVIDIA-NeMo/Automodel/issues/3917) — Masked CE losses overwrite the caller's labels in place, zeroing a reused batch's loss
 - [json-schema-org/JSON-Schema-Test-Suite#1197](https://github.com/json-schema-org/JSON-Schema-Test-Suite/issues/1197) — idn-email: the domain half is never checked — no draft has a single invalid-domain case, unlike email
 - [c2siorg/Scan8#148](https://github.com/c2siorg/Scan8/issues/148) — Docs: broken links returning 404 in README.md (demo videos) and Dashboard/revamp_frontend/README.md (CRA docs)
-- [NVIDIA-NeMo/Automodel#3882](https://github.com/NVIDIA-NeMo/Automodel/issues/3882) — LR scheduler resume applies the old weight-decay schedule and treats num_steps as a delta
 <!--ISSUES:END-->
 
 ## Projects
@@ -107,5 +107,5 @@ Python · JavaScript · TypeScript · Node · Express · MongoDB · React · Nex
 ---
 
 <!--FOOTER:START-->
-<sub>Auto-updated 2026-10-09 16:27 UTC · <a href=".github/workflows/readme.yml">workflow</a></sub>
+<sub>Auto-updated 2026-10-09 21:09 UTC · <a href=".github/workflows/readme.yml">workflow</a></sub>
 <!--FOOTER:END-->
