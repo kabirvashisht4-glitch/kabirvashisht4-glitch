@@ -3,7 +3,7 @@
 
 # Kabir Vashisht
 
-CS + AI student · open-source contributor
+CS + AI · open-source contributor
 
 [GitHub](https://github.com/kabirvashisht4-glitch) · [LinkedIn](https://www.linkedin.com/in/kabir-vashisht-dev/) · [X](https://x.com/KabirVashi58127) · [LeetCode](https://leetcode.com/u/Oeb42wSeTz/) · [Portfloio](https://kabirv.me/)
 
