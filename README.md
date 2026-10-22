@@ -10,7 +10,7 @@ CS + AI · open-source contributor
 </div>
 
 <!--SUMMARY:START-->
-I read other people's code until I find the crack. Scientific Python, ML training paths, and spec test suites — the places where a bug stays quiet because the output still looks correct. **24 merged upstream PRs** across sktime, SageMath, JSON Schema, NVIDIA NeMo and others, plus **70 issues filed** upstream.
+I read other people's code until I find the crack. Scientific Python, ML training paths, and spec test suites — the places where a bug stays quiet because the output still looks correct. **38 merged upstream PRs** across sktime, SageMath, JSON Schema, NVIDIA NeMo and others, plus **73 issues filed** upstream.
 <!--SUMMARY:END-->
 
 Currently studying machine learning — the theory, the libraries, and the LLM tooling on top. Reading production ML code until something looks wrong turns out to be a fast way to learn it.
@@ -20,16 +20,18 @@ Currently studying machine learning — the theory, the libraries, and the LLM t
 <!--UPSTREAM:START-->
 | Project | PRs | Focus |
 | --- | --- | --- |
-| [sktime / skpro](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Asktime%2Fskpro&type=pullrequests) | 6 merged | Probabilistic regression internals — MultiIndex alignment in quantile prediction, and type validation that never rejected anything.<br><sub>Latest: <a href="https://github.com/sktime/skpro/pull/1034">#1034</a> — [DOC] Fix broken link in dependencies.rst</sub> |
-| [SageMath](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Asagemath&type=pullrequests) | 2 merged · 1 open | Matroid isomorphism segfaults, PARI matrix conversion on zero-column input, docstrings and docs across the org.<br><sub>Open: <a href="https://github.com/sagemath/sage/pull/42752">#42752</a> — Validate the documented parameter domains of the generalized Tamari constructors</sub> |
+| [sktime / skpro](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Asktime%2Fskpro&type=pullrequests) | 6 merged · 5 open | Probabilistic regression internals — MultiIndex alignment in quantile prediction, and type validation that never rejected anything.<br><sub>Latest: <a href="https://github.com/sktime/skpro/pull/1034">#1034</a> — [DOC] Fix broken link in dependencies.rst</sub> |
+| [SageMath](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Asagemath&type=pullrequests) | 5 merged · 1 open | Matroid isomorphism segfaults, PARI matrix conversion on zero-column input, docstrings and docs across the org.<br><sub>Open: <a href="https://github.com/sagemath/sage/pull/42752">#42752</a> — Validate the documented parameter domains of the generalized Tamari constructors</sub> |
 | [Tracer Cloud](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3ATracer-Cloud&type=pullrequests) | 3 merged | AI-SRE toolkit — Alertmanager alerts and silences as report evidence, provider retyping, Telegram approval dispatch.<br><sub>Latest: <a href="https://github.com/Tracer-Cloud/opensre/pull/5762">#5762</a> — feat(alertmanager): map alerts and silences into report evidence</sub> |
 | [NVIDIA NeMo](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3ANVIDIA-NeMo&type=pullrequests) | 10 merged · 8 open | Dataset tokenization paths where batching options silently no-op, plus agent docs that ship CI-failing instructions.<br><sub>Latest: <a href="https://github.com/NVIDIA-NeMo/Automodel/pull/4456">#4456</a> — fix(speculative): save the effective config in draft checkpoints</sub> |
 | [OpenTelemetry](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Aopen-telemetry&type=pullrequests) | 1 merged | Docs infrastructure and team-link integrity across members-only orgs.<br><sub>Latest: <a href="https://github.com/open-telemetry/opentelemetry.io/pull/10457">#10457</a> — docs: add "(members-only)" to team links in README</sub> |
+| [JSON Schema](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Ajson-schema-org&type=pullrequests) | 11 merged | Spec test-suite coverage that landed in one draft and was never backported.<br><sub>Latest: <a href="https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1220">#1220</a> — Check every subschema for unknown keywords in the unified checker</sub> |
 | [Sakana AI](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3ASakanaAI&type=pullrequests) | 1 open | Private evaluation aborting when a failed run is followed by an identical solution.<br><sub>Open: <a href="https://github.com/SakanaAI/robust-kbench/pull/6">#6</a> — Fix mnist_pool: honor kernel_size in forward/backward tasks</sub> |
 | [c2siorg/Scan8](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Ac2siorg%2FScan8&type=pullrequests) | 4 open | docs: fix documentation links returning 404 · fix: point the worker HPA at the worker and use millicores for cpu<br><sub>Open: <a href="https://github.com/c2siorg/Scan8/pull/149">#149</a> — docs: fix documentation links returning 404</sub> |
 | [c2siorg/Codelabz](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Ac2siorg%2FCodelabz&type=pullrequests) | 4 open | fix: write notification_id when the notification is created · fix: scope the notifications page read to the signed-in user<br><sub>Open: <a href="https://github.com/c2siorg/Codelabz/pull/466">#466</a> — fix: write notification_id when the notification is created</sub> |
 | [PrithvijitBose/Proofly](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3APrithvijitBose%2FProofly&type=pullrequests) | 1 merged | Security: authenticate profile publish against GitHub identity<br><sub>Latest: <a href="https://github.com/PrithvijitBose/Proofly/pull/19">#19</a> — Security: authenticate profile publish against GitHub identity</sub> |
 | [mynextproject-portfolio/github-flow-onboarding-kabirvashisht4-glitch](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Amynextproject-portfolio%2Fgithub-flow-onboarding-kabirvashisht4-glitch&type=pullrequests) | 1 merged | feat: personalize greeting with my name<br><sub>Latest: <a href="https://github.com/mynextproject-portfolio/github-flow-onboarding-kabirvashisht4-glitch/pull/2">#2</a> — feat: personalize greeting with my name</sub> |
+| [agentregistry-dev/agentregistry](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Aagentregistry-dev%2Fagentregistry&type=pullrequests) | 1 open | docker: run the server image as a non-root user<br><sub>Open: <a href="https://github.com/agentregistry-dev/agentregistry/pull/703">#703</a> — docker: run the server image as a non-root user</sub> |
 | [Cloud-CV/EvalAI](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3ACloud-CV%2FEvalAI&type=pullrequests) | 1 open | fix #4870: add hover effect to .text-light-gray class<br><sub>Open: <a href="https://github.com/Cloud-CV/EvalAI/pull/4900">#4900</a> — fix #4870: add hover effect to .text-light-gray class</sub> |
 <!--UPSTREAM:END-->
 
@@ -39,6 +41,7 @@ Live snapshot of open pull requests in upstream repos (auto-refreshed).
 
 <!--OPENPRS:START-->
 - [NVIDIA-NeMo/Automodel#4171](https://github.com/NVIDIA-NeMo/Automodel/pull/4171) — ci: lint the PR merged into its target branch
+- [agentregistry-dev/agentregistry#703](https://github.com/agentregistry-dev/agentregistry/pull/703) — docker: run the server image as a non-root user
 - [SakanaAI/robust-kbench#6](https://github.com/SakanaAI/robust-kbench/pull/6) — Fix mnist_pool: honor kernel_size in forward/backward tasks
 - [NVIDIA-NeMo/Automodel#3918](https://github.com/NVIDIA-NeMo/Automodel/pull/3918) — fix(loss): stop masked losses from overwriting the caller's labels
 - [c2siorg/Scan8#149](https://github.com/c2siorg/Scan8/pull/149) — docs: fix documentation links returning 404
@@ -52,7 +55,6 @@ Live snapshot of open pull requests in upstream repos (auto-refreshed).
 - [NVIDIA-NeMo/Automodel#3775](https://github.com/NVIDIA-NeMo/Automodel/pull/3775) — fix(launcher): honor --nproc-per-node over the local device count
 - [NVIDIA-NeMo/Automodel#3768](https://github.com/NVIDIA-NeMo/Automodel/pull/3768) — fix(training): honor max_steps when num_epochs is unset
 - [c2siorg/Codelabz#462](https://github.com/c2siorg/Codelabz/pull/462) — fix: show the newest notifications instead of an arbitrary fifty
-- [c2siorg/Scan8#143](https://github.com/c2siorg/Scan8/pull/143) — fix: use the configured proxy when downloading files
 <!--OPENPRS:END-->
 
 ## Issues filed
@@ -105,5 +107,5 @@ Python · JavaScript · TypeScript · Node · Express · MongoDB · React · Nex
 ---
 
 <!--FOOTER:START-->
-<sub>Auto-updated 2026-10-22 13:59 UTC · <a href=".github/workflows/readme.yml">workflow</a></sub>
+<sub>Auto-updated 2026-10-22 18:42 UTC · <a href=".github/workflows/readme.yml">workflow</a></sub>
 <!--FOOTER:END-->
