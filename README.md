@@ -27,9 +27,9 @@ Currently studying machine learning — the theory, the libraries, and the LLM t
 | [OpenTelemetry](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Aopen-telemetry&type=pullrequests) | 1 merged | Docs infrastructure and team-link integrity across members-only orgs.<br><sub>Latest: <a href="https://github.com/open-telemetry/opentelemetry.io/pull/10457">#10457</a> — docs: add "(members-only)" to team links in README</sub> |
 | [JSON Schema](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Ajson-schema-org&type=pullrequests) | 11 merged | Spec test-suite coverage that landed in one draft and was never backported.<br><sub>Latest: <a href="https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1220">#1220</a> — Check every subschema for unknown keywords in the unified checker</sub> |
 | [Sakana AI](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3ASakanaAI&type=pullrequests) | 1 open | Private evaluation aborting when a failed run is followed by an identical solution.<br><sub>Open: <a href="https://github.com/SakanaAI/robust-kbench/pull/6">#6</a> — Fix mnist_pool: honor kernel_size in forward/backward tasks</sub> |
+| [Dreamstick9/Kreg_AP_2026](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3ADreamstick9%2FKreg_AP_2026&type=pullrequests) | 3 merged · 1 open | KL-15: validation and pagination · KL-11: auth middleware and error handling<br><sub>Open: <a href="https://github.com/Dreamstick9/Kreg_AP_2026/pull/20">#20</a> — KL-15: validation and pagination</sub> |
 | [c2siorg/Scan8](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Ac2siorg%2FScan8&type=pullrequests) | 4 open | docs: fix documentation links returning 404 · fix: point the worker HPA at the worker and use millicores for cpu<br><sub>Open: <a href="https://github.com/c2siorg/Scan8/pull/149">#149</a> — docs: fix documentation links returning 404</sub> |
 | [c2siorg/Codelabz](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Ac2siorg%2FCodelabz&type=pullrequests) | 4 open | fix: write notification_id when the notification is created · fix: scope the notifications page read to the signed-in user<br><sub>Open: <a href="https://github.com/c2siorg/Codelabz/pull/466">#466</a> — fix: write notification_id when the notification is created</sub> |
-| [Dreamstick9/Kreg_AP_2026](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3ADreamstick9%2FKreg_AP_2026&type=pullrequests) | 3 merged | KL-11: auth middleware and error handling · KL-07: add register route<br><sub>Latest: <a href="https://github.com/Dreamstick9/Kreg_AP_2026/pull/9">#9</a> — KL-11: auth middleware and error handling</sub> |
 | [PrithvijitBose/Proofly](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3APrithvijitBose%2FProofly&type=pullrequests) | 1 merged | Security: authenticate profile publish against GitHub identity<br><sub>Latest: <a href="https://github.com/PrithvijitBose/Proofly/pull/19">#19</a> — Security: authenticate profile publish against GitHub identity</sub> |
 | [mynextproject-portfolio/github-flow-onboarding-kabirvashisht4-glitch](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Amynextproject-portfolio%2Fgithub-flow-onboarding-kabirvashisht4-glitch&type=pullrequests) | 1 merged | feat: personalize greeting with my name<br><sub>Latest: <a href="https://github.com/mynextproject-portfolio/github-flow-onboarding-kabirvashisht4-glitch/pull/2">#2</a> — feat: personalize greeting with my name</sub> |
 | [Cloud-CV/EvalAI](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3ACloud-CV%2FEvalAI&type=pullrequests) | 1 open | fix #4870: add hover effect to .text-light-gray class<br><sub>Open: <a href="https://github.com/Cloud-CV/EvalAI/pull/4900">#4900</a> — fix #4870: add hover effect to .text-light-gray class</sub> |
@@ -40,6 +40,7 @@ Currently studying machine learning — the theory, the libraries, and the LLM t
 Live snapshot of open pull requests in upstream repos (auto-refreshed).
 
 <!--OPENPRS:START-->
+- [Dreamstick9/Kreg_AP_2026#20](https://github.com/Dreamstick9/Kreg_AP_2026/pull/20) — KL-15: validation and pagination
 - [NVIDIA-NeMo/Automodel#4171](https://github.com/NVIDIA-NeMo/Automodel/pull/4171) — ci: lint the PR merged into its target branch
 - [SakanaAI/robust-kbench#6](https://github.com/SakanaAI/robust-kbench/pull/6) — Fix mnist_pool: honor kernel_size in forward/backward tasks
 - [NVIDIA-NeMo/Automodel#3918](https://github.com/NVIDIA-NeMo/Automodel/pull/3918) — fix(loss): stop masked losses from overwriting the caller's labels
@@ -54,7 +55,6 @@ Live snapshot of open pull requests in upstream repos (auto-refreshed).
 - [c2siorg/Codelabz#462](https://github.com/c2siorg/Codelabz/pull/462) — fix: show the newest notifications instead of an arbitrary fifty
 - [c2siorg/Scan8#143](https://github.com/c2siorg/Scan8/pull/143) — fix: use the configured proxy when downloading files
 - [NVIDIA-NeMo/Automodel#3756](https://github.com/NVIDIA-NeMo/Automodel/pull/3756) — fix(datasets): read group_by_length token lengths through the dataset
-- [c2siorg/Codelabz#460](https://github.com/c2siorg/Codelabz/pull/460) — fix: stop empty tag lists from breaking the Featured feed and recommendations
 <!--OPENPRS:END-->
 
 ## Issues filed
@@ -107,5 +107,5 @@ Python · JavaScript · TypeScript · Node · Express · MongoDB · React · Nex
 ---
 
 <!--FOOTER:START-->
-<sub>Auto-updated 2026-11-17 04:05 UTC · <a href=".github/workflows/readme.yml">workflow</a></sub>
+<sub>Auto-updated 2026-11-17 13:44 UTC · <a href=".github/workflows/readme.yml">workflow</a></sub>
 <!--FOOTER:END-->
