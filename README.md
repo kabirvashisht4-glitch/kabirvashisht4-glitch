@@ -10,7 +10,7 @@ CS + AI · open-source contributor
 </div>
 
 <!--SUMMARY:START-->
-I read other people's code until I find the crack. Scientific Python, ML training paths, and spec test suites — the places where a bug stays quiet because the output still looks correct. **42 merged upstream PRs** across sktime, SageMath, JSON Schema, NVIDIA NeMo and others, plus **73 issues filed** upstream.
+I read other people's code until I find the crack. Scientific Python, ML training paths, and spec test suites — the places where a bug stays quiet because the output still looks correct. **45 merged upstream PRs** across sktime, SageMath, JSON Schema, NVIDIA NeMo and others, plus **74 issues filed** upstream.
 <!--SUMMARY:END-->
 
 Currently studying machine learning — the theory, the libraries, and the LLM tooling on top. Reading production ML code until something looks wrong turns out to be a fast way to learn it.
@@ -27,9 +27,10 @@ Currently studying machine learning — the theory, the libraries, and the LLM t
 | [OpenTelemetry](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Aopen-telemetry&type=pullrequests) | 1 merged | Docs infrastructure and team-link integrity across members-only orgs.<br><sub>Latest: <a href="https://github.com/open-telemetry/opentelemetry.io/pull/10457">#10457</a> — docs: add "(members-only)" to team links in README</sub> |
 | [JSON Schema](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Ajson-schema-org&type=pullrequests) | 11 merged | Spec test-suite coverage that landed in one draft and was never backported.<br><sub>Latest: <a href="https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1220">#1220</a> — Check every subschema for unknown keywords in the unified checker</sub> |
 | [Sakana AI](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3ASakanaAI&type=pullrequests) | 1 open | Private evaluation aborting when a failed run is followed by an identical solution.<br><sub>Open: <a href="https://github.com/SakanaAI/robust-kbench/pull/6">#6</a> — Fix mnist_pool: honor kernel_size in forward/backward tasks</sub> |
-| [Dreamstick9/Kreg_AP_2026](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3ADreamstick9%2FKreg_AP_2026&type=pullrequests) | 4 merged · 1 open | CP2 (AP): PostgreSQL schema and ER diagram · KL-15: validation and pagination<br><sub>Open: <a href="https://github.com/Dreamstick9/Kreg_AP_2026/pull/23">#23</a> — CP2 (AP): PostgreSQL schema and ER diagram</sub> |
+| [Dreamstick9/Kreg_AP_2026](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3ADreamstick9%2FKreg_AP_2026&type=pullrequests) | 6 merged | KL-19: resolve and list incidents · KL-23: explain before and after index<br><sub>Latest: <a href="https://github.com/Dreamstick9/Kreg_AP_2026/pull/29">#29</a> — KL-19: resolve and list incidents</sub> |
 | [c2siorg/Scan8](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Ac2siorg%2FScan8&type=pullrequests) | 4 open | docs: fix documentation links returning 404 · fix: point the worker HPA at the worker and use millicores for cpu<br><sub>Open: <a href="https://github.com/c2siorg/Scan8/pull/149">#149</a> — docs: fix documentation links returning 404</sub> |
 | [c2siorg/Codelabz](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Ac2siorg%2FCodelabz&type=pullrequests) | 4 open | fix: write notification_id when the notification is created · fix: scope the notifications page read to the signed-in user<br><sub>Open: <a href="https://github.com/c2siorg/Codelabz/pull/466">#466</a> — fix: write notification_id when the notification is created</sub> |
+| [Madhav-GPT/Kreg_AP_2026](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3AMadhav-GPT%2FKreg_AP_2026&type=pullrequests) | 1 merged | Add the Kreg Lite CP3 query workload<br><sub>Latest: <a href="https://github.com/Madhav-GPT/Kreg_AP_2026/pull/1">#1</a> — Add the Kreg Lite CP3 query workload</sub> |
 | [PrithvijitBose/Proofly](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3APrithvijitBose%2FProofly&type=pullrequests) | 1 merged | Security: authenticate profile publish against GitHub identity<br><sub>Latest: <a href="https://github.com/PrithvijitBose/Proofly/pull/19">#19</a> — Security: authenticate profile publish against GitHub identity</sub> |
 | [mynextproject-portfolio/github-flow-onboarding-kabirvashisht4-glitch](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Amynextproject-portfolio%2Fgithub-flow-onboarding-kabirvashisht4-glitch&type=pullrequests) | 1 merged | feat: personalize greeting with my name<br><sub>Latest: <a href="https://github.com/mynextproject-portfolio/github-flow-onboarding-kabirvashisht4-glitch/pull/2">#2</a> — feat: personalize greeting with my name</sub> |
 | [Cloud-CV/EvalAI](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3ACloud-CV%2FEvalAI&type=pullrequests) | 1 open | fix #4870: add hover effect to .text-light-gray class<br><sub>Open: <a href="https://github.com/Cloud-CV/EvalAI/pull/4900">#4900</a> — fix #4870: add hover effect to .text-light-gray class</sub> |
@@ -40,7 +41,6 @@ Currently studying machine learning — the theory, the libraries, and the LLM t
 Live snapshot of open pull requests in upstream repos (auto-refreshed).
 
 <!--OPENPRS:START-->
-- [Dreamstick9/Kreg_AP_2026#23](https://github.com/Dreamstick9/Kreg_AP_2026/pull/23) — CP2 (AP): PostgreSQL schema and ER diagram
 - [NVIDIA-NeMo/Automodel#4171](https://github.com/NVIDIA-NeMo/Automodel/pull/4171) — ci: lint the PR merged into its target branch
 - [SakanaAI/robust-kbench#6](https://github.com/SakanaAI/robust-kbench/pull/6) — Fix mnist_pool: honor kernel_size in forward/backward tasks
 - [NVIDIA-NeMo/Automodel#3918](https://github.com/NVIDIA-NeMo/Automodel/pull/3918) — fix(loss): stop masked losses from overwriting the caller's labels
@@ -55,11 +55,13 @@ Live snapshot of open pull requests in upstream repos (auto-refreshed).
 - [c2siorg/Codelabz#462](https://github.com/c2siorg/Codelabz/pull/462) — fix: show the newest notifications instead of an arbitrary fifty
 - [c2siorg/Scan8#143](https://github.com/c2siorg/Scan8/pull/143) — fix: use the configured proxy when downloading files
 - [NVIDIA-NeMo/Automodel#3756](https://github.com/NVIDIA-NeMo/Automodel/pull/3756) — fix(datasets): read group_by_length token lengths through the dataset
+- [c2siorg/Codelabz#460](https://github.com/c2siorg/Codelabz/pull/460) — fix: stop empty tag lists from breaking the Featured feed and recommendations
 <!--OPENPRS:END-->
 
 ## Issues filed
 
 <!--ISSUES:START-->
+- [Dreamstick9/Kreg_AP_2026#31](https://github.com/Dreamstick9/Kreg_AP_2026/issues/31) — Show a clear error when logging in with an unregistered email
 - [NVIDIA-NeMo/Automodel#4455](https://github.com/NVIDIA-NeMo/Automodel/issues/4455) — Speculative recipes save the pre-override config, so auto-resume skips their own checkpoint
 - [json-schema-org/JSON-Schema-Test-Suite#1213](https://github.com/json-schema-org/JSON-Schema-Test-Suite/issues/1213) — regex: only one valid pattern is tested, so a checker that rejects alternation or quantifiers passes
 - [sagemath/sage#42935](https://github.com/sagemath/sage/issues/42935) — Meson subprojects tracking upstream HEAD (mpfi, singular, flint) break builds without any change in Sage
@@ -69,7 +71,6 @@ Live snapshot of open pull requests in upstream repos (auto-refreshed).
 - [NVIDIA-NeMo/Automodel#3948](https://github.com/NVIDIA-NeMo/Automodel/issues/3948) — nemo_run executor overrides silently ignore keys the executor has no field for
 - [NVIDIA-NeMo/Automodel#3933](https://github.com/NVIDIA-NeMo/Automodel/issues/3933) — default_collater reshapes the caller's example tensors from [S] to [1, S]
 - [NVIDIA-NeMo/Automodel#3917](https://github.com/NVIDIA-NeMo/Automodel/issues/3917) — Masked CE losses overwrite the caller's labels in place, zeroing a reused batch's loss
-- [json-schema-org/JSON-Schema-Test-Suite#1197](https://github.com/json-schema-org/JSON-Schema-Test-Suite/issues/1197) — idn-email: the domain half is never checked — no draft has a single invalid-domain case, unlike email
 <!--ISSUES:END-->
 
 ## Projects
@@ -107,5 +108,5 @@ Python · JavaScript · TypeScript · Node · Express · MongoDB · React · Nex
 ---
 
 <!--FOOTER:START-->
-<sub>Auto-updated 2026-11-18 14:26 UTC · <a href=".github/workflows/readme.yml">workflow</a></sub>
+<sub>Auto-updated 2026-11-18 22:13 UTC · <a href=".github/workflows/readme.yml">workflow</a></sub>
 <!--FOOTER:END-->
