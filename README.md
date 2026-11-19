@@ -10,7 +10,7 @@ CS + AI · open-source contributor
 </div>
 
 <!--SUMMARY:START-->
-I read other people's code until I find the crack. Scientific Python, ML training paths, and spec test suites — the places where a bug stays quiet because the output still looks correct. **45 merged upstream PRs** across sktime, SageMath, JSON Schema, NVIDIA NeMo and others, plus **74 issues filed** upstream.
+I read other people's code until I find the crack. Scientific Python, ML training paths, and spec test suites — the places where a bug stays quiet because the output still looks correct. **46 merged upstream PRs** across sktime, SageMath, JSON Schema, NVIDIA NeMo and others, plus **74 issues filed** upstream.
 <!--SUMMARY:END-->
 
 Currently studying machine learning — the theory, the libraries, and the LLM tooling on top. Reading production ML code until something looks wrong turns out to be a fast way to learn it.
@@ -27,7 +27,7 @@ Currently studying machine learning — the theory, the libraries, and the LLM t
 | [OpenTelemetry](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Aopen-telemetry&type=pullrequests) | 1 merged | Docs infrastructure and team-link integrity across members-only orgs.<br><sub>Latest: <a href="https://github.com/open-telemetry/opentelemetry.io/pull/10457">#10457</a> — docs: add "(members-only)" to team links in README</sub> |
 | [JSON Schema](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Ajson-schema-org&type=pullrequests) | 11 merged | Spec test-suite coverage that landed in one draft and was never backported.<br><sub>Latest: <a href="https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1220">#1220</a> — Check every subschema for unknown keywords in the unified checker</sub> |
 | [Sakana AI](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3ASakanaAI&type=pullrequests) | 1 open | Private evaluation aborting when a failed run is followed by an identical solution.<br><sub>Open: <a href="https://github.com/SakanaAI/robust-kbench/pull/6">#6</a> — Fix mnist_pool: honor kernel_size in forward/backward tasks</sub> |
-| [Dreamstick9/Kreg_AP_2026](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3ADreamstick9%2FKreg_AP_2026&type=pullrequests) | 6 merged | KL-19: resolve and list incidents · KL-23: explain before and after index<br><sub>Latest: <a href="https://github.com/Dreamstick9/Kreg_AP_2026/pull/29">#29</a> — KL-19: resolve and list incidents</sub> |
+| [Dreamstick9/Kreg_AP_2026](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3ADreamstick9%2FKreg_AP_2026&type=pullrequests) | 7 merged | KL-27: downtime and failing queries · KL-19: resolve and list incidents<br><sub>Latest: <a href="https://github.com/Dreamstick9/Kreg_AP_2026/pull/39">#39</a> — KL-27: downtime and failing queries</sub> |
 | [c2siorg/Scan8](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Ac2siorg%2FScan8&type=pullrequests) | 4 open | docs: fix documentation links returning 404 · fix: point the worker HPA at the worker and use millicores for cpu<br><sub>Open: <a href="https://github.com/c2siorg/Scan8/pull/149">#149</a> — docs: fix documentation links returning 404</sub> |
 | [c2siorg/Codelabz](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Ac2siorg%2FCodelabz&type=pullrequests) | 4 open | fix: write notification_id when the notification is created · fix: scope the notifications page read to the signed-in user<br><sub>Open: <a href="https://github.com/c2siorg/Codelabz/pull/466">#466</a> — fix: write notification_id when the notification is created</sub> |
 | [Madhav-GPT/Kreg_AP_2026](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3AMadhav-GPT%2FKreg_AP_2026&type=pullrequests) | 1 merged | Add the Kreg Lite CP3 query workload<br><sub>Latest: <a href="https://github.com/Madhav-GPT/Kreg_AP_2026/pull/1">#1</a> — Add the Kreg Lite CP3 query workload</sub> |
@@ -108,5 +108,5 @@ Python · JavaScript · TypeScript · Node · Express · MongoDB · React · Nex
 ---
 
 <!--FOOTER:START-->
-<sub>Auto-updated 2026-11-19 13:43 UTC · <a href=".github/workflows/readme.yml">workflow</a></sub>
+<sub>Auto-updated 2026-11-19 22:22 UTC · <a href=".github/workflows/readme.yml">workflow</a></sub>
 <!--FOOTER:END-->
