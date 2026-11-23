@@ -10,7 +10,7 @@ CS + AI · open-source contributor
 </div>
 
 <!--SUMMARY:START-->
-I read other people's code until I find the crack. Scientific Python, ML training paths, and spec test suites — the places where a bug stays quiet because the output still looks correct. **48 merged upstream PRs** across sktime, SageMath, JSON Schema, NVIDIA NeMo and others, plus **74 issues filed** upstream.
+I read other people's code until I find the crack. Scientific Python, ML training paths, and spec test suites — the places where a bug stays quiet because the output still looks correct. **50 merged upstream PRs** across sktime, SageMath, JSON Schema, NVIDIA NeMo and others, plus **74 issues filed** upstream.
 <!--SUMMARY:END-->
 
 Currently studying machine learning — the theory, the libraries, and the LLM tooling on top. Reading production ML code until something looks wrong turns out to be a fast way to learn it.
@@ -23,7 +23,7 @@ Currently studying machine learning — the theory, the libraries, and the LLM t
 | [sktime / skpro](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20repo%3Asktime%2Fskpro&type=pullrequests) | 6 merged · 5 open | Probabilistic regression internals — MultiIndex alignment in quantile prediction, and type validation that never rejected anything.<br><sub>Latest: <a href="https://github.com/sktime/skpro/pull/1034">#1034</a> — [DOC] Fix broken link in dependencies.rst</sub> |
 | [SageMath](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Asagemath&type=pullrequests) | 5 merged · 1 open | Matroid isomorphism segfaults, PARI matrix conversion on zero-column input, docstrings and docs across the org.<br><sub>Open: <a href="https://github.com/sagemath/sage/pull/42752">#42752</a> — Validate the documented parameter domains of the generalized Tamari constructors</sub> |
 | [Tracer Cloud](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3ATracer-Cloud&type=pullrequests) | 3 merged | AI-SRE toolkit — Alertmanager alerts and silences as report evidence, provider retyping, Telegram approval dispatch.<br><sub>Latest: <a href="https://github.com/Tracer-Cloud/opensre/pull/5762">#5762</a> — feat(alertmanager): map alerts and silences into report evidence</sub> |
-| [NVIDIA NeMo](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3ANVIDIA-NeMo&type=pullrequests) | 10 merged · 6 open | Dataset tokenization paths where batching options silently no-op, plus agent docs that ship CI-failing instructions.<br><sub>Latest: <a href="https://github.com/NVIDIA-NeMo/Automodel/pull/4456">#4456</a> — fix(speculative): save the effective config in draft checkpoints</sub> |
+| [NVIDIA NeMo](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3ANVIDIA-NeMo&type=pullrequests) | 12 merged · 4 open | Dataset tokenization paths where batching options silently no-op, plus agent docs that ship CI-failing instructions.<br><sub>Latest: <a href="https://github.com/NVIDIA-NeMo/Automodel/pull/4456">#4456</a> — fix(speculative): save the effective config in draft checkpoints</sub> |
 | [OpenTelemetry](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Aopen-telemetry&type=pullrequests) | 1 merged | Docs infrastructure and team-link integrity across members-only orgs.<br><sub>Latest: <a href="https://github.com/open-telemetry/opentelemetry.io/pull/10457">#10457</a> — docs: add "(members-only)" to team links in README</sub> |
 | [JSON Schema](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3Ajson-schema-org&type=pullrequests) | 11 merged | Spec test-suite coverage that landed in one draft and was never backported.<br><sub>Latest: <a href="https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1220">#1220</a> — Check every subschema for unknown keywords in the unified checker</sub> |
 | [Sakana AI](https://github.com/search?q=author%3Akabirvashisht4-glitch%20type%3Apr%20org%3ASakanaAI&type=pullrequests) | 1 open | Private evaluation aborting when a failed run is followed by an identical solution.<br><sub>Open: <a href="https://github.com/SakanaAI/robust-kbench/pull/6">#6</a> — Fix mnist_pool: honor kernel_size in forward/backward tasks</sub> |
@@ -41,9 +41,7 @@ Currently studying machine learning — the theory, the libraries, and the LLM t
 Live snapshot of open pull requests in upstream repos (auto-refreshed).
 
 <!--OPENPRS:START-->
-- [NVIDIA-NeMo/Automodel#4171](https://github.com/NVIDIA-NeMo/Automodel/pull/4171) — ci: lint the PR merged into its target branch
 - [SakanaAI/robust-kbench#6](https://github.com/SakanaAI/robust-kbench/pull/6) — Fix mnist_pool: honor kernel_size in forward/backward tasks
-- [NVIDIA-NeMo/Automodel#3918](https://github.com/NVIDIA-NeMo/Automodel/pull/3918) — fix(loss): stop masked losses from overwriting the caller's labels
 - [c2siorg/Scan8#149](https://github.com/c2siorg/Scan8/pull/149) — docs: fix documentation links returning 404
 - [NVIDIA-NeMo/Automodel#3789](https://github.com/NVIDIA-NeMo/Automodel/pull/3789) — fix(models): declare and honor logits_to_keep on Mistral3 VLM forward
 - [c2siorg/Codelabz#466](https://github.com/c2siorg/Codelabz/pull/466) — fix: write notification_id when the notification is created
@@ -56,6 +54,8 @@ Live snapshot of open pull requests in upstream repos (auto-refreshed).
 - [c2siorg/Scan8#143](https://github.com/c2siorg/Scan8/pull/143) — fix: use the configured proxy when downloading files
 - [NVIDIA-NeMo/Automodel#3756](https://github.com/NVIDIA-NeMo/Automodel/pull/3756) — fix(datasets): read group_by_length token lengths through the dataset
 - [c2siorg/Codelabz#460](https://github.com/c2siorg/Codelabz/pull/460) — fix: stop empty tag lists from breaking the Featured feed and recommendations
+- [c2siorg/Scan8#141](https://github.com/c2siorg/Scan8/pull/141) — fix: declare missing dependencies and repair broken imports in Dashboard
+- [sktime/skpro#1012](https://github.com/sktime/skpro/pull/1012) — DOC: fix broken 404 contributor links in example notebooks
 <!--OPENPRS:END-->
 
 ## Issues filed
@@ -108,5 +108,5 @@ Python · JavaScript · TypeScript · Node · Express · MongoDB · React · Nex
 ---
 
 <!--FOOTER:START-->
-<sub>Auto-updated 2026-11-23 03:53 UTC · <a href=".github/workflows/readme.yml">workflow</a></sub>
+<sub>Auto-updated 2026-11-23 15:08 UTC · <a href=".github/workflows/readme.yml">workflow</a></sub>
 <!--FOOTER:END-->
